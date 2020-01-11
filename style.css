@@ -24,7 +24,7 @@ p {
 }
 
 .header {
-    background-color: #ffffff;    
+    background-color: blue;    
     height: 88px;  
     display: flex;
     align-items: center;

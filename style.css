@@ -157,7 +157,7 @@ p {
     min-width: 320px;  
     
 }
-.read-more:hover {
+.read-more:hover, .button__repair:hover, .button__search:hover {
     cursor: pointer;
     text-decoration: underline;    
 }
@@ -239,9 +239,7 @@ p {
         display: flex;
         flex: 0 1 auto;        
     }    
-    .main__button:hover {
-        cursor: pointer;
-    }
+    
     .main__button>div {
         margin-right: 32px;
     }

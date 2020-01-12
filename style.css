@@ -68,7 +68,7 @@ p {
     align-items: center;
     justify-content: center; 
 }
-.button:hover, .nav__button:hover {
+.red-button:hover, .nav__button:hover {
     cursor: pointer;
 }
 

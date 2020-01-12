@@ -266,6 +266,9 @@ p {
     .article__text>p {
         height: 160px;
     }
+    .article__picture {
+        flex: 1;
+    }
 }
 
 

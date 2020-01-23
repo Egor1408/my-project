@@ -14,7 +14,8 @@ html,body {
 h1 {
     font-family: "TTLakes-bold";   
 }
-p {
+
+p,span {
     font-family: "TTLakes";
 }
 .wrapper {
@@ -32,25 +33,25 @@ p {
     border-bottom: 1px solid #D9FFF5;
 }
 
-.left-col {
+.header__left-col {
     display: flex;
     align-items: center;
     flex: auto;
     justify-content: space-evenly;
 }
-.middle-col {
+.header__middle-col {
     display: flex;
     flex: auto;
     justify-content: space-evenly;
 }
 
-.right-col {    
+.header__right-col {    
     display: flex;
     flex: auto;
     justify-content: space-evenly;
 }
 
-.divider {
+.header__divider {
     width: 2px;
     height: 32px;
     border-radius: 1px;
@@ -58,7 +59,7 @@ p {
     background-repeat: no-repeat;
 }
 
-.red-button { 
+.button { 
     width: 40px;
     height: 40px;      
     border-radius: 20px;
@@ -68,7 +69,7 @@ p {
     align-items: center;
     justify-content: center; 
 }
-.red-button:hover, .nav__button:hover {
+.button:hover, .nav__button:hover {
     cursor: pointer;
 }
 
@@ -157,7 +158,7 @@ p {
     min-width: 320px;  
     
 }
-.read-more:hover, .button__repair:hover, .button__search:hover {
+.read-more:hover, .button-repair:hover, .button-search:hover {
     cursor: pointer;
     text-decoration: underline;    
 }
@@ -168,15 +169,15 @@ p {
 @media (min-width: 320px) {
 
     
-    .left-col {
+    .header__left-col {
         flex: 0 1 auto;
         width: 200px;
     }   
-    .divider {
+    .header__divider {
         flex: 1 1 auto;
         justify-content: flex-start;
     }  
-    .right-col {
+    .header__right-col {
         
         flex: 0 1 auto;
         width: 140px;
@@ -191,23 +192,23 @@ p {
     .hidden {
         display: flex;
     }
-    .left-col {
+    .header__left-col {
         flex: 0 1 auto;
         width: 200px;
     }
-    .left-col .divider {
+    .header__left-col .header__divider {
         flex: 0 1 auto;
         width: 2px;
     }    
-    .middle-col {
+    .header__middle-col {
         flex: 1 1 auto;
         width: 160px;
         justify-content: flex-end;
     }
-    .middle-col>button {
+    .header__middle-col>button {
         margin-right: 16px;
     }
-    .right-col {
+    .header__right-col {
         flex: 0 1 auto;
         width: 140px;
     }
@@ -252,7 +253,7 @@ p {
         letter-spacing: -0.2px;
     }
 
-    .button__repair, .button__search {
+    .button-repair, .button-search {
         display: flex;
         align-items: center;
     }

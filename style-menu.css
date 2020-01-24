@@ -1,0 +1,95 @@
+.main-menu {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 1024px;
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main-menu__header {
+    height: 110px;   
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    justify-content: space-between;
+}
+.main-menu__header .logo {
+    flex: 1;
+    padding-left: 16px;
+}
+.main-menu__nav ul{
+    margin-top: 0;
+    padding: 0;
+}
+.main-menu__nav li {
+    list-style: none; 
+    padding-bottom: 32px; 
+    position: relative; 
+   
+}
+
+.main-menu__nav li a {    
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    letter-spacing: -0.2px;
+    color: #000;
+    padding-left: 24px;
+    text-decoration: none;
+}
+
+.main-menu__nav li a:focus {
+    font-weight: normal; 
+    background: url("img/menu-highlight.png") no-repeat;      
+}
+
+.main-menu__button {
+    display: flex;
+}
+
+.main-menu__contact .main-menu__button,
+.main-menu__contact .main-menu__email,
+.main-menu__contact .main-menu__tel,
+.main-menu__lang {
+    margin-left: 24px;
+}
+
+.main-menu__contact .main-menu__button button {
+    margin: 0 16px 16px 0;
+}
+.main-menu__email,
+.main-menu__tel {
+    font-weight: bold;    
+}
+
+.main-menu__contact .main-menu__tel {
+    margin-top: 12px;
+}
+
+.main-menu__lang {
+    margin-top: 40px ;
+}
+
+.main-menu__lang button {   
+    border: 0;    
+    outline: none; 
+    background-color: #fff;
+    color: #000;
+    padding: 3px;
+    font-size: 16px;
+    line-height: 24px;
+    
+}
+
+.main-menu__lang button:focus {
+    color: #7E7E82;
+}
+
+.main-menu__lang button:hover {
+    cursor: pointer;
+}
+
+

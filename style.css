@@ -65,6 +65,10 @@ html,body {
     justify-content: center; 
     transition-duration: 1s;
 }
+.button:focus {
+    border: 0;
+    outline: none;
+}
 .button:hover {
     transition-property: background-color, box-shadow;
     transition-duration: 1s;

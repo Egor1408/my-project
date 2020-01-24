@@ -63,6 +63,13 @@ html,body {
     display: flex;
     align-items: center;
     justify-content: center; 
+    transition-duration: 1s;
+}
+.button:hover {
+    transition-property: background-color, box-shadow;
+    transition-duration: 1s;
+    background-color: #ff1947;
+    box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5);
 }
 .button:hover, .nav__button:hover {
     cursor: pointer;

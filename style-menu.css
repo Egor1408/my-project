@@ -43,7 +43,16 @@
 
 .main-menu__nav li a:focus {
     font-weight: normal; 
-    background: url("img/menu-highlight.png") no-repeat;      
+    /* background: url("img/menu-highlight.png") no-repeat;       */
+}
+.main-menu__nav li a:focus::after {
+    content:"";
+    background: url("img/menu-highlight.png") no-repeat;
+    position: absolute;
+    width: 4px;
+    height: 32px;
+    left: 0;
+    top: -4px;
 }
 
 .main-menu__button {

@@ -64,7 +64,7 @@ html,body {
     align-items: center;
     justify-content: center; 
     transition-property: background-color, box-shadow;
-    transition-duration: 1s;
+    transition-duration: 0.3s;
 }
 .button:focus {
     border: 0;

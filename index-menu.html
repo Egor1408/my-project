@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,51 +11,51 @@
 <body>
     <div class="main-menu">
         <div class="main-menu__header">
-            <div class="button-closed button">
-                <img src="img/button-closed.png" alt='кнопка "закрыть меню"'>
+            <div class="button">
+                <img src="img/button-closed.svg" alt='кнопка "закрыть меню"'>
             </div>
             <div class="logo">
-                <img src="img/logo.png" alt="логотип">
+                <img src="img/logo.svg" alt="логотип">
             </div>
-            <div class="button-search-main-menu button">
-                <img src="img/button-search-main-menu.png" alt='кнопка "поиск"'>
+            <div class="button">
+                <img src="img/button-search-main-menu.svg" alt='кнопка "поиск"'>
             </div>      
         </div>
-        <div class="main-menu__nav">           
-                <ul>
-                    <li><a href="#">Ремонт техники</a></li>
-                    <li><a href="#">Услуги и сервисы</a></li>
-                    <li><a href="#">Корпоративным клиентам</a></li>
-                    <li><a href="#">Продавцам техники</a></li>
-                    <li><a href="#">Партнерам</a></li>
-                    <li><a href="#">Производителям</a></li>
-                    <li><a href="#">Наши сервисные центры</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>          
+        <div>           
+            <ul class="nav-list">
+                <li class="nav-list__item"><a href="#" class="active">Ремонт техники</a></li>
+                <li class="nav-list__item"><a href="#">Услуги и сервисы</a></li>
+                <li class="nav-list__item"><a href="#">Корпоративным клиентам</a></li>
+                <li class="nav-list__item"><a href="#">Продавцам техники</a></li>
+                <li class="nav-list__item"><a href="#">Партнерам</a></li>
+                <li class="nav-list__item"><a href="#" >Производителям</a></li>
+                <li class="nav-list__item"><a href="#">Наши сервисные центры</a></li>
+                <li class="nav-list__item"><a href="#">Контакты</a></li>
+            </ul>          
         </div>
-        <div class="main-menu__contact">
+        <div>
             <div class="main-menu__button">
-                <button class="button-call button">
-                    <img src="img/button-call.png" alt='кнопка "позвонить"'>
+                <button class="button">
+                    <img src="img/button-call.svg" alt='кнопка "позвонить"'>
                 </button>
-                <button class="button-chat button">
-                    <img src="img/button-chat.png" alt='кнопка "чат"'>
+                <button class="button">
+                    <img src="img/button-chat.svg" alt='кнопка "чат"'>
                 </button>
-                <button class="button-profile button">
-                    <img src="img/button-profile.png" alt='кнопка "профиль"'>
+                <button class="button">
+                    <img src="img/button-profile.svg" alt='кнопка "профиль"'>
                 </button>
             </div>
             <div class="main-menu__email">
-                <span>mail@cps.com</span>
+                <a href="#">mail@cps.com</a>
             </div>
             <div class="main-menu__tel">
-                <span>8 800 890 8900</span>
+                <a href="#">8 800 890 8900</a>
             </div>
         </div>
         <div class="main-menu__lang">
-            <button autofocus><span>RU</span></button>
-            <button><span>EN</span></button>
-            <button><span>CH</span></button>
+            <button class="active">RU</button>
+            <button>EN</button>
+            <button>CH</buttonclass="active">
         </div>
         
     </div>

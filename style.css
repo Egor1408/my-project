@@ -2,23 +2,25 @@ html {
     box-sizing: border-box;
   }
   *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: inherit;     
   }
 html,body {
     margin: 0 auto;
     padding: 0;
     height: 100%;
     min-width: 320px;
-    max-width: 1400px;
-    font-family: TTLakes, sans-serif;
+    max-width: 1400px; 
+    font-family: TTLakes; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;     
 }
-
 .wrapper {
     display: flex;   
     flex-direction: column; 
     min-height: 100%;            
 }
-
 .header {
     background-color: #ffffff;    
     height: 88px;  
@@ -50,8 +52,9 @@ html,body {
     width: 2px;
     height: 32px;
     border-radius: 1px;
-    background-image: url("img/divider.png");
+    background-image: url("img/divider.svg");
     background-repeat: no-repeat;
+        
 }
 
 .button { 
@@ -81,13 +84,15 @@ html,body {
 .main {   
     background-color: #F8F8F8;    
 }
-.highlight {
+.main__title::after {
+    content: "";
     position: absolute;    
     width: 4px;
     left: 0;
     top: 0;
     height: 40px;   
-    background: url("img/highlight.png") no-repeat;    
+    background-color: #41F6D7;    
+    border-radius: 0 6px 6px 0;
 }
 .main__header {
     position: relative;
@@ -98,7 +103,7 @@ html,body {
 .main__title {
     padding-left: 20px;
     font-size: 28px;
-    font-weight: 900;
+    font-weight: bold;
     line-height: 40px;
     letter-spacing: -0.6px;
     color: #1B1C21;
@@ -127,11 +132,9 @@ html,body {
 }
 
 .nav__button span {    
-    white-space: nowrap;
-    font-size: 16px;
-    line-height: 24px;
+    white-space: nowrap;    
     margin: auto;
-    padding: 0 16px;
+    padding: 0 16px;    
 }
 
 .nav__button:hover {
@@ -143,6 +146,7 @@ html,body {
     border-radius: 6px;    
 }
 .article__text>p {
+    font-weight: 400;
     padding: 0 16px;
     height: 90px;
     max-width: 490px;
@@ -150,25 +154,19 @@ html,body {
 }
 .read-more {
     display: flex;
-    align-items: center;
-    height: 24px;
-    margin-left: 16px;
+    align-items: center;    
     border: 0;
     background-color: #F8F8F8;
 }
 
 .read-more__text {    
-    margin: 0 16px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
+    margin: 0 16px;        
     color: #1B1C21;    
 }
 .read-more__icon {
     width: 8px;
     height: 12px;
-    background: url("img/read-more.png") no-repeat 50% 50%;
+    background: url("img/read-more.svg") no-repeat 50% 50%;
 }
 .article__picture>img {
     margin-top: 20px; 
@@ -263,12 +261,8 @@ html,body {
         margin-right: 32px;
     }
     .main__button span { 
-        margin-right: 8px;       
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 24px;
-        text-align: right;
-        letter-spacing: -0.2px;
+        margin-right: 8px;         
+        text-align: right;        
     }
 
     .button-repair, .button-search {
@@ -294,10 +288,22 @@ html,body {
 
 
 @font-face {     
-    font-family: "TTLakes";      
+    font-family: TTLakes;      
     src: url("fonts/TTLakes-Regular.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: 400; 
-}   
+}
+@font-face {     
+    font-family: TTLakes;      
+    src: url("fonts/TTLakes-Medium.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: 500; 
+}  
+@font-face {     
+    font-family: TTLakes;      
+    src: url("fonts/TTLakes-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: 700; 
+}  
 
 

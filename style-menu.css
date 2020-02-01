@@ -33,7 +33,7 @@
     padding-bottom: 32px; 
     position: relative;   
 }
-.active {
+a.active {
     color: #7E7E82;    
 }
 a.active::after {
@@ -65,6 +65,9 @@ a.active::after {
     background-color: #fff;
     color: #000;
     padding: 0 7px 0 0;     
+}
+button.active {
+    color: #7E7E82;    
 }
 
 .main-menu__lang button:hover {

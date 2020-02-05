@@ -19,6 +19,7 @@ closeMenu.addEventListener('keydown', function(evt) {
 
 
 var mySwiper = new Swiper('.swiper-container', {
+    width:240,
     pagination: {
         el: '.swiper-pagination'
     }

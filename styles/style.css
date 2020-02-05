@@ -2,7 +2,7 @@ html {
     box-sizing: border-box;
   }
   *, *:before, *:after {
-    box-sizing: inherit;     
+    box-sizing: inherit;        
   }
 html,body {
     margin: 0 auto;
@@ -52,7 +52,7 @@ html,body {
     width: 2px;
     height: 32px;
     border-radius: 1px;
-    background-image: url("img/divider.svg");
+    background-image: url("../img/divider.svg");
     background-repeat: no-repeat;
         
 }
@@ -115,7 +115,7 @@ html,body {
     overflow-x: scroll;
     overflow-y: hidden; 
     overflow: -moz-scrollbars-none; 
-    -ms-overflow-style: none;  
+    -ms-overflow-style: none;
 }
 .nav::-webkit-scrollbar {
     height: 0;
@@ -128,7 +128,8 @@ html,body {
     color: #7E7E82;
     border: 0;
     background-color: #F8F8F8;
-    outline: none;    
+    outline: none;
+    font-size: 16px;      
 }
 
 .nav__button span {    
@@ -166,7 +167,7 @@ html,body {
 .read-more__icon {
     width: 8px;
     height: 12px;
-    background: url("img/read-more.svg") no-repeat 50% 50%;
+    background: url("../img/read-more.svg") no-repeat 50% 50%;
 }
 .article__picture>img {
     margin-top: 20px; 
@@ -289,19 +290,19 @@ html,body {
 
 @font-face {     
     font-family: TTLakes;      
-    src: url("fonts/TTLakes-Regular.ttf") format("truetype"); 
+    src: url("../fonts/TTLakes-Regular.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: 400; 
 }
 @font-face {     
     font-family: TTLakes;      
-    src: url("fonts/TTLakes-Medium.ttf") format("truetype"); 
+    src: url("../fonts/TTLakes-Medium.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: 500; 
 }  
 @font-face {     
     font-family: TTLakes;      
-    src: url("fonts/TTLakes-Bold.ttf") format("truetype"); 
+    src: url("../fonts/TTLakes-Bold.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: 700; 
 }  

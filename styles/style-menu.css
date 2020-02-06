@@ -14,7 +14,7 @@
 }
 
 .main-menu_open {
-    left: 0;
+    transform: translateX(350px);
 }
 .main-menu a {
     text-decoration: none;    

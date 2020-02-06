@@ -153,18 +153,21 @@ html,body {
     max-width: 490px;
     overflow: hidden;
 }
-.read-more {
+.article__button {
     display: flex;
     align-items: center;    
     border: 0;
+    margin-left: 32px;
+    padding: 0;
     background-color: #F8F8F8;
+    outline: none;
 }
 
-.read-more__text {    
+.article__button>span {    
     margin: 0 16px;        
     color: #1B1C21;    
 }
-.read-more__icon {
+.article__button>div {
     width: 8px;
     height: 12px;
     background: url("../img/read-more.svg") no-repeat 50% 50%;
@@ -175,7 +178,7 @@ html,body {
     min-width: 320px;  
     
 }
-.read-more:hover, .button-repair:hover, .button-search:hover {
+.article__button:hover, .button-repair:hover, .button-search:hover {
     cursor: pointer;
     text-decoration: underline;    
 }
@@ -204,7 +207,7 @@ html,body {
     }
 }
 
-@media (min-width: 784px) {
+@media (min-width: 768px) {
 
     .hidden {
         display: flex;

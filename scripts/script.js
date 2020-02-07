@@ -1,26 +1,24 @@
 var mainMenu = document.querySelector('.main-menu');
-
 var buttonMenu = document.querySelector('.button-menu');
 buttonMenu.addEventListener('click', function(evt){
     evt.preventDefault();
     mainMenu.classList.add('main-menu_open');
 });
-
 var closeMenu = mainMenu.querySelector('.close-menu');
 closeMenu.addEventListener('click', function(evt) {
     evt.preventDefault();
     mainMenu.classList.remove('main-menu_open');
 });
-window.addEventListener('click', function(evt) {   
-    evt.preventDefault(); 
-    if(mainMenu.classList.contains('main-menu_open') && !mainMenu.contains(evt.target)) {   
-        // mainMenu.classList.remove('main-menu_open');
-    }
-});
 document.addEventListener('keydown', function(evt) {    
     if(evt.keyCode === 27) {
         mainMenu.classList.remove('main-menu_open');       
     };
+});
+window.addEventListener('click', function(evt) {   
+    evt.preventDefault(); 
+    if(mainMenu.classList.contains('main-menu_open') && !mainMenu.contains(evt.target) && !buttonMenu.contains(evt.target)) {   
+        mainMenu.classList.remove('main-menu_open');        
+    }
 });
 
 var openSwiper = document.querySelector('.swiper__button');

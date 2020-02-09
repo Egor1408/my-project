@@ -19,20 +19,20 @@
     padding: 16px;
 }
 .swiper-wrapper {    
-    padding: 16px;
+    padding: 0 16px;
     height: 72px;
     transition-duration: 0.5s;
 }
 
 @media (min-width: 768px) {
     .swiper-wrapper {
-        height: 160px;                
+        height: 176px;                
         display: flex;
         flex-wrap: wrap;        
         overflow: hidden;
         transition-duration: 0.5s;
     }
-    .swiper-wrapper.open {
+    .open {
         height: auto;
     }
 }
@@ -52,8 +52,7 @@
         width: 224px;
         height: 72px;
         margin-right: 24px;
-        margin-bottom: 16px;
-        box-sizing: border-box;        
+        margin-bottom: 16px;                
     }
 }
 @media (min-width: 1120px) {
@@ -80,8 +79,7 @@
         display: flex;
         align-items: center;    
         border: 0;
-        margin-left: 32px;
-        padding: 0;
+        margin-left: 32px;        
         background-color: #F8F8F8;
         outline: none;
         position: relative;

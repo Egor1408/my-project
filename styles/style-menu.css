@@ -40,10 +40,10 @@
     padding-bottom: 32px; 
     position: relative;   
 }
-a.active {
+.active>a {
     color: #7E7E82;    
 }
-a.active::after {
+.active::after {
     content:"";    
     background-color: #41F6D7;
     border-radius: 0 6px 6px 0;

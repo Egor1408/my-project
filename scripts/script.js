@@ -1,3 +1,4 @@
+//всплывающее меню
 var mainMenu = document.querySelector('.main-menu');
 var buttonMenu = document.querySelector('.button-menu');
 buttonMenu.addEventListener('click', function(evt){
@@ -21,6 +22,83 @@ window.addEventListener('click', function(evt) {
     }
 });
 
+//кнопка "Читать далее"
+var articleButton = document.querySelector('.article__button');
+var articleText = document.querySelector('.article__text');
+var articleButtonText = articleButton.querySelector('span'); 
+var articleButtonImg = articleButton.querySelector('div');
+articleButton.addEventListener('click', function(evt){
+    evt.preventDefault();
+    if(articleText.classList.contains('closed')) {
+        articleText.classList.remove('closed');    
+        articleText.classList.add('open');
+        articleButtonText.textContent = "Скрыть";
+        articleButtonImg.style.transform = "rotate(180deg)";
+    } else {
+        articleText.classList.remove('open');    
+        articleText.classList.add('closed');
+        articleButtonText.textContent = "Читать далее";
+        articleButtonImg.style.transform = "rotate(0deg)";
+    }
+} )
+
+//ссылки всплывающего меню
+var navItems = document.querySelectorAll('.nav-list__item');
+//функция добавления класса 'active'
+var itemClick = function(key) {
+    key.addEventListener('click', function(evt){
+        evt.preventDefault();
+        itemMenuActiveDel();                 
+        key.classList.add('active');          
+    });
+}
+//функция удаления класса 'active'
+var itemMenuActiveDel = function() {
+    for(var i=0; i<navItems.length; i++) {
+        var item = navItems[i];
+        if(item.classList.contains('active')){
+            item.classList.remove('active');
+        }
+    }
+};
+for(var i=0; i<navItems.length; i++) {
+    var item = navItems[i];
+    itemClick(item);         
+};
+
+    
+
+//кнопки смены языка
+var langButtons = document.querySelectorAll('.lang button');
+var langButtonClick = function(key) {
+    key.addEventListener('click', function(evt){
+        evt.preventDefault();
+        langButtonActiveDel();                 
+        key.classList.add('active');          
+    });
+}
+var langButtonActiveDel = function() {
+    for(var i=0; i<langButtons.length; i++) {
+        var button = langButtons[i];
+        if(button.classList.contains('active')){
+            button.classList.remove('active');
+        }
+    }
+};
+for(var i=0; i<langButtons.length; i++) {
+    var button = langButtons[i];
+    langButtonClick(button);         
+};
+
+
+
+
+
+
+
+//свипер
+
+
 var openSwiper = document.querySelector('.swiper__button');
 var swiper = document.querySelector('.swiper-wrapper');
 var swiperText = openSwiper.querySelector('span');
@@ -37,9 +115,6 @@ openSwiper.addEventListener('click', function(evt){
         swiperImg.style.transform = "rotate(180deg)";
     }    
 });
-
-
-
 var breakpoint = window.matchMedia( '(min-width:768px)');
 var mySwiper;
 var breakPointChecked = function() {
@@ -52,8 +127,6 @@ var breakPointChecked = function() {
             return enableSwiper();
         }
     };
-
-
 var enableSwiper = function() {
     var mySwiper = new Swiper('.swiper-container', {
         width:240,

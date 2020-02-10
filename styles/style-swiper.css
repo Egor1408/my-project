@@ -67,10 +67,11 @@
 .swiper-slide__button {
     height: 40px;   
 }
-.swiper-pagination {
+.swiper-pagination {  
+    margin-top: 16px;  
     position: relative;    
 }
-.swiper-pagination-bullet {    
+.swiper-pagination-bullet {        
     background-color: #ddd;    
 }
 

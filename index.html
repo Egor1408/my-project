@@ -28,7 +28,7 @@
             </div>
         </header>
         <section class="mainSection">
-            <div>                
+            <div class="mainSection__header">                
                 <h1 class="mainSection__title">Услуги и сервисы</h1>
                 <div class="mainSection__button">
                     <div class="buttonRepair"> 
@@ -42,14 +42,14 @@
                 </div>    
             </div>
             <div class="mainSection__nav">     
-                <button class="mainSection__item active"><span>Ремонтируемые бренды</span></button>  
+                <button class="mainSection__item-active"><span>Ремонтируемые бренды</span></button>  
                 <button class="mainSection__item"><span>Ремонтируемые устройства</span></button>
                 <button class="mainSection__item"><span>Цены на услуги</span></button>
                 <button class="mainSection__item"><span>Адреса сервисных центров</span></button>
                 <button class="mainSection__item"><span>Специальные цены</span></button>
                 <button class="mainSection__item"><span>Отзывы</span></button>
             </div>   
-            <div>  
+            <div class="mainSection__article">  
                 <div class="article">
                     <div class="article__text closed">                        
                             <p>Мы являемся авторизованным сервисным центром по ремонту техники
@@ -60,16 +60,109 @@
                             Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
                             очередь, советуют нас родным и близким.</p>                                                
                     </div> 
-                    <button class="article__button">
+                    <button class="article__button closed">
                         <div></div>
                         <span>Читать далее</span>
                     </button> 
                 </div>             
-                <div class="content__picture">
+                <div class="mainSection__picture">
                     <img src="img/picture.png" alt="picture">
                 </div>
             </div>
         </section> 
+        <div class="swiper-container__brands" >
+            <div class="swiper-title">
+                <span>ремонт техники различных брендов</span>
+            </div>
+            <div class="swiper-wrapper">                
+                <div class="swiper-slide lenovo">                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide samsung">                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide apple">                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide viewsonic">                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide bosch">                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide hp">                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide acer">                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide sony">                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide lenovo">                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide samsung">                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide apple">                    
+                    <button class="swiper-slide__button"></button>
+                </div>                                                   
+            </div>
+            <div class="swiper-pagination">
+                <button class="swiper__button button__brands">
+                    <div></div>
+                    <span>Показать все</span>
+                </button> 
+            </div>
+        </div>
+        <div class="swiper-container__technics" >
+            <div class="swiper-title">
+                <span>ремонт различных видов техники</span>
+            </div>
+            <div class="swiper-wrapper">                
+                <div class="swiper-slide">
+                    <span>Ремонт ноутбуков</span>                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide">
+                    <span>Ремонт планшетов</span>                      
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide"> 
+                    <span>Ремонт ПК</span>  
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide">  
+                    <span>Ремонт мониторов</span>                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide">
+                    <span>Ремонт ноутбуков</span>                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide">
+                    <span>Ремонт планшетов</span>                      
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide"> 
+                    <span>Ремонт ПК</span>  
+                    <button class="swiper-slide__button"></button>
+                </div>
+                <div class="swiper-slide">  
+                    <span>Ремонт мониторов</span>                    
+                    <button class="swiper-slide__button"></button>
+                </div>
+                                                                 
+            </div>
+            <div class="swiper-pagination">
+                <button class="swiper__button button__technics">
+                    <div></div>
+                    <span>Показать все</span>
+                </button> 
+            </div>
+        </div>
     </div>
+    <script src="src/js/swiper.min.js"></script>
 </body>
 </html>

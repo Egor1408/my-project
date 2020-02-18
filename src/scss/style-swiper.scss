@@ -1,0 +1,149 @@
+.swiper-container__brands {
+    min-width: 320px;
+    width: 100%;    
+    background-color: $bgColor-smoke; 
+    border-bottom: 1px solid $BottomBorder;
+    position: relative;        
+        @media (min-width: 768px) {            
+                height: auto;       
+            }
+}
+.swiper-title {
+    background: linear-gradient(270deg, $bgColor-smoke 0%, $bgColor-white 98.61%);    
+    text-transform: uppercase;
+    color: $text-gray;
+    width: 100%;    
+    padding: 16px;
+}
+.swiper-wrapper {    
+    padding: 0 16px;
+    height: 72px;    
+        @media (min-width: 768px) {            
+            height: 176px;                
+            display: flex;
+            flex-wrap: wrap;        
+            overflow: hidden;            
+        }
+}
+.open {
+    height: auto;
+    }
+
+.swiper-slide {    
+    background-color: $bgColor-white;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;    
+    align-items: center;
+    box-sizing: border-box;  
+        @media (min-width: 768px) {            
+            width: 224px;
+            height: 72px;
+            margin-right: 24px;
+            margin-bottom: 16px;           
+        }
+        @media (min-width: 1120px) {
+            width: 240px;            
+            margin-right: 32px;        
+        }
+}
+.swiper-slide__button {
+    width: 40px;
+    height: 40px;      
+    border-radius: 20px;
+    border: 0px;      
+    display: flex;
+    position: relative;
+    left: 148px; 
+    background-image: url('../img/go.svg');       
+}
+.lenovo {
+    background: url("../img/logo-lenovo.svg") no-repeat 16px 50%;
+}
+.samsung {
+    background: url("../img/logo-samsung.svg") no-repeat 16px 50%;
+} 
+.apple {
+    background: url("../img/logo-apple.svg") no-repeat 16px 50%;
+} 
+.viewsonic {
+    background: url("../img/logo-viewsonic.svg") no-repeat 16px 50%;
+} 
+.bosch {
+    background: url("../img/logo-bosch.svg") no-repeat 16px 50%;
+} 
+.hp {
+    background: url("../img/logo-hp.svg") no-repeat 16px 50%;
+} 
+.acer {
+    background: url("../img/logo-acer.svg") no-repeat 16px 50%;
+} 
+.sony {
+    background: url("../img/logo-sony.svg") no-repeat 16px 50%;
+}  
+.swiper-pagination {  
+    position: relative;
+    margin-top: 16px;
+        @media (min-width: 768px) {    
+        margin-top: 0;
+        margin-bottom: 32px;
+    }
+}
+.swiper-pagination-bullet {        
+    background-color: #ddd;    
+}
+
+@media (min-width: 768px) {
+    .swiper__button {
+        display: flex;
+        align-items: center;    
+        border: 0;
+        margin-left: 32px;        
+        background-color: #F8F8F8;
+        outline: none;
+        position: relative;
+        top: 0px;
+    }    
+    .swiper__button>span {    
+        margin: 0 16px;        
+        color: #1B1C21;    
+    }
+    .swiper__button>div {
+        width: 8px;
+        height: 12px;
+        background: url("../img/read-more.svg") no-repeat 50% 50%;
+    }    
+    .swiper__button:hover {
+        cursor: pointer;
+        text-decoration: underline;    
+    }
+}
+.swiper-container__technics {
+    background-color: $bgColor-smoke;
+    border-bottom: 1px solid $BottomBorder;
+        .swiper-slide { 
+            display: flex;
+            align-items: flex-start;                        
+                @media (min-width: 768px) {       
+                    height: 160px;
+                }             
+        }
+        .swiper-slide__button {        
+            left: 0; 
+            top: 84px;             
+        }
+        .swiper-wrapper {       
+            // height: 160px;
+        }
+
+        .swiper-pagination {  
+            position: relative;            
+                @media (min-width: 768px) {    
+                margin-top: 16px;
+                margin-bottom: 32px;
+            }
+        }
+}
+

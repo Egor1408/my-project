@@ -327,6 +327,7 @@ html {
   margin: auto;
   height: 100vh;
   min-width: 320px;
+  width: 100%;
   max-width: 1400px;
   font-family: TTLakes;
   font-weight: 500;
@@ -520,7 +521,7 @@ button:hover {
   overflow-y: hidden;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none; }
-  @media (min-width: 1366px) {
+  @media (min-width: 1120px) {
     .mainSection__nav {
       flex-wrap: wrap; } }
 
@@ -1111,9 +1112,8 @@ button.swiper-pagination-bullet {
       display: flex;
       flex-wrap: wrap;
       overflow: hidden; } }
-
-.open {
-  height: auto; }
+  .swiper-wrapper.open {
+    height: auto; }
 
 .swiper-slide {
   background-color: #fff;
@@ -1204,9 +1204,16 @@ button.swiper-pagination-bullet {
 .swiper-container__technics {
   background-color: #F8F8F8;
   border-bottom: 1px solid #D9FFF5; }
+  .swiper-container__technics .swiper-wrapper {
+    height: 160px;
+    margin-bottom: 16px; }
+    .swiper-container__technics .swiper-wrapper.open {
+      height: auto;
+      margin-bottom: 0; }
   .swiper-container__technics .swiper-slide {
     display: flex;
-    align-items: flex-start; }
+    align-items: flex-start;
+    height: 160px; }
     @media (min-width: 768px) {
       .swiper-container__technics .swiper-slide {
         height: 160px; } }
@@ -1217,8 +1224,185 @@ button.swiper-pagination-bullet {
     position: relative; }
     @media (min-width: 768px) {
       .swiper-container__technics .swiper-pagination {
-        margin-top: 16px;
         margin-bottom: 32px; } }
+
+.swiper-container__pricesOfServices {
+  background-color: #F8F8F8;
+  border-bottom: 1px solid #D9FFF5;
+  height: auto; }
+  .swiper-container__pricesOfServices .swiper-wrapper {
+    display: flex;
+    height: 200px;
+    margin-top: 16px; }
+    @media (min-width: 768px) {
+      .swiper-container__pricesOfServices .swiper-wrapper {
+        height: auto;
+        display: table;
+        border-collapse: collapse;
+        empty-cells: hide;
+        width: 95%;
+        margin: auto;
+        border-radius: 6px; } }
+  @media (min-width: 768px) {
+    .swiper-container__pricesOfServices .swiper-pagination {
+      display: none; } }
+  .swiper-container__pricesOfServices .hint768 {
+    display: none;
+    color: #7E7E82; }
+    @media (min-width: 768px) {
+      .swiper-container__pricesOfServices .hint768 {
+        display: table-row; } }
+    .swiper-container__pricesOfServices .hint768 span {
+      display: table-cell;
+      padding: 31px 0 16px 0; }
+    .swiper-container__pricesOfServices .hint768 .services {
+      padding-left: 16px; }
+  .swiper-container__pricesOfServices .swiper-slide {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 200px;
+    border: 0; }
+    @media (min-width: 768px) {
+      .swiper-container__pricesOfServices .swiper-slide {
+        height: 64px;
+        display: table-row;
+        border-left: 32px solid white;
+        border-right: 32px solid white; } }
+    .swiper-container__pricesOfServices .swiper-slide .swiper-slide__hint {
+      color: #7E7E82;
+      line-height: 16px;
+      font-weight: 400; }
+      @media (min-width: 768px) {
+        .swiper-container__pricesOfServices .swiper-slide .swiper-slide__hint {
+          display: none; } }
+    .swiper-container__pricesOfServices .swiper-slide .swiper-slide__services {
+      margin-top: -10px;
+      margin-bottom: 5px; }
+    .swiper-container__pricesOfServices .swiper-slide .swiper-slide__price {
+      margin-top: -10px;
+      margin-bottom: 5px; }
+    .swiper-container__pricesOfServices .swiper-slide .swiper-slide__term {
+      margin-top: -10px; }
+    .swiper-container__pricesOfServices .swiper-slide:last-child .swiper-slide__services {
+      border: 0; }
+    .swiper-container__pricesOfServices .swiper-slide:last-child .swiper-slide__price {
+      border: 0; }
+    .swiper-container__pricesOfServices .swiper-slide:last-child .swiper-slide__term {
+      border: 0; }
+    .swiper-container__pricesOfServices .swiper-slide:last-child .swiper-slide__goOrder {
+      border: 0; }
+  @media (min-width: 768px) {
+    .swiper-container__pricesOfServices .swiper-slide__services {
+      display: table-cell;
+      border-bottom: 1px solid  #eaeaea; } }
+  @media (min-width: 768px) {
+    .swiper-container__pricesOfServices .swiper-slide__price {
+      display: table-cell;
+      border-bottom: 1px solid #eaeaea; } }
+  @media (min-width: 768px) {
+    .swiper-container__pricesOfServices .swiper-slide__term {
+      display: table-cell;
+      border-bottom: 1px solid #eaeaea; } }
+  .swiper-container__pricesOfServices .swiper-slide__goOrder button {
+    display: flex;
+    justify-content: space-around;
+    width: 119px;
+    height: 32px;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #FF3E79;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 16px; }
+    .swiper-container__pricesOfServices .swiper-slide__goOrder button div {
+      height: 24px;
+      width: 24px;
+      background-image: url(./static/goOrder.svg); }
+    @media (min-width: 768px) {
+      .swiper-container__pricesOfServices .swiper-slide__goOrder button {
+        position: relative;
+        left: 20%; } }
+    @media (min-width: 950px) {
+      .swiper-container__pricesOfServices .swiper-slide__goOrder button {
+        left: 30%; } }
+    @media (min-width: 1100px) {
+      .swiper-container__pricesOfServices .swiper-slide__goOrder button {
+        left: 40%; } }
+  @media (min-width: 768px) {
+    .swiper-container__pricesOfServices .swiper-slide__goOrder {
+      display: table-cell;
+      border-bottom: 1px solid #eaeaea; } }
+
+.ndsText {
+  min-width: 288px;
+  margin: 0 16px 0 16px;
+  font-size: 14px; }
+  @media (min-width: 768px) {
+    .ndsText {
+      margin: 24px 0 0 24px;
+      width: 421px; } }
+
+.commercialProposal {
+  margin-top: 16px;
+  margin-bottom: 40px; }
+  .commercialProposal button {
+    display: inline-flex;
+    border: 0;
+    padding: 0;
+    background-color: #F8F8F8;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 16px;
+    text-align: left; }
+    .commercialProposal button span {
+      color: #1B1C21;
+      background: url(./static/Line.svg) no-repeat 60% 90%;
+      width: 192px; }
+      @media (min-width: 400px) {
+        .commercialProposal button span {
+          width: 320px;
+          background-position: 98% 60%; } }
+    .commercialProposal button:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+    @media (min-width: 768px) {
+      .commercialProposal button {
+        width: auto;
+        margin-left: 24px; } }
+
+.footer {
+  height: 129px;
+  text-align: center;
+  font-size: 14px;
+  color: #7E7E82; }
+  @media (min-width: 768px) {
+    .footer {
+      display: flex;
+      height: 81px; } }
+  @media (min-width: 1366px) {
+    .footer {
+      height: 65px; } }
+  .footer span {
+    display: block;
+    margin: auto;
+    margin-top: 16px; }
+  .footer .footer__development {
+    width: 218px; }
+  .footer .footer__politics {
+    width: 214px; }
+  .footer .footer__offer {
+    width: 312px;
+    margin-bottom: 19px; }
 
 
 /*# sourceMappingURL=style.css.map*/

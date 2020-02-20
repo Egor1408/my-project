@@ -327,13 +327,13 @@ html {
   margin: auto;
   height: 100vh;
   min-width: 320px;
-  width: 100%;
   max-width: 1400px;
   font-family: TTLakes;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -0.2px; }
+  letter-spacing: -0.2px;
+  overflow-x: hidden; }
 
 *, *:before, *:after {
   box-sizing: inherit; }

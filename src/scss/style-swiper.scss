@@ -24,10 +24,11 @@
             flex-wrap: wrap;        
             overflow: hidden;            
         }
+        &.open {
+            height: auto;
+            } 
 }
-.open {
-    height: auto;
-    }
+
 
 .swiper-slide {    
     background-color: $bgColor-white;
@@ -123,9 +124,18 @@
 .swiper-container__technics {
     background-color: $bgColor-smoke;
     border-bottom: 1px solid $BottomBorder;
+        .swiper-wrapper {
+            height: 160px;
+            margin-bottom: 16px;
+            &.open {
+                height: auto;
+                margin-bottom: 0;
+                }           
+        }
         .swiper-slide { 
             display: flex;
-            align-items: flex-start;                        
+            align-items: flex-start;            
+            height: 160px;                       
                 @media (min-width: 768px) {       
                     height: 160px;
                 }             
@@ -134,16 +144,10 @@
             left: 0; 
             top: 84px;             
         }
-        .swiper-wrapper {       
-            // height: 160px;
-        }
-
         .swiper-pagination {  
             position: relative;            
-                @media (min-width: 768px) {    
-                margin-top: 16px;
+                @media (min-width: 768px) {                    
                 margin-bottom: 32px;
             }
         }
 }
-

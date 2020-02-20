@@ -3,6 +3,7 @@ html {
     margin: auto;
     height: 100vh;    
     min-width: 320px;
+    width: 100%;
     max-width: 1400px; 
     font-family: TTLakes; 
     font-weight: 500;
@@ -218,7 +219,7 @@ button:hover {
     overflow-y: hidden; 
     overflow: -moz-scrollbars-none; 
     -ms-overflow-style: none;
-        @media (min-width: 1366px) {
+        @media (min-width: 1120px) {
             flex-wrap: wrap;
         }
 }

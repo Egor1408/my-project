@@ -15,7 +15,6 @@ openSwiperBrands.addEventListener('click', function(evt){
         swiperImgBrands.style.transform = "rotate(180deg)";
     }    
 });
-
 var openSwiperTechniks = document.querySelector('.button__technics');
 var techniks = document.querySelector('.swiper-container__technics');
 var wrapperTechniks = techniks.querySelector('.swiper-wrapper');
@@ -48,6 +47,16 @@ if (document.body.clientWidth < 768) {
     var mySwiper2 = new Swiper('.swiper-container__brands', {
         width:240,
         height:160,
+        spaceBetween:16,
+        pagination: {
+            el: '.swiper-pagination'
+        }         
+    });
+}
+if (document.body.clientWidth < 768) {
+    var mySwiper2 = new Swiper('.swiper-container__pricesOfServices', {
+        width:260,
+        height:200,
         spaceBetween:16,
         pagination: {
             el: '.swiper-pagination'

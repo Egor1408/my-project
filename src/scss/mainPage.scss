@@ -1,9 +1,9 @@
 html {
     box-sizing: border-box;
     margin: auto;
-    height: 100vh;    
+    height: 100%;    
     min-width: 320px;    
-    max-width: 1400px; 
+    max-width: 1440px; 
     font-family: TTLakes; 
     font-weight: 500;
     font-size: 16px;
@@ -14,29 +14,35 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+.wrap {
+    display: flex;        
+}
 
-.wrapper {
+.mainContent {
     display: flex;
-    flex-direction: column;        
+    flex-direction: column;
+    width: 100%; 
+    border-left: 1px solid $BottomBorder;       
         @media (min-width: 1366px) {
-            max-width: 1046px;
+            // max-width: 1044px;            
             margin: auto;
         }
         @media (min-width: 1440px) {
             max-width: 1120px;            
         }
 }
-header {
-    background-color: $bgColor-white;
-    height: 88px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid $BottomBorder;
-        @media (min-width: 1366px) {
-            display: none;
-        }
-}
+    header {
+        background-color: $bgColor-white;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $BottomBorder;
+            @media (min-width: 1366px) {
+                display: none;
+            }
+    }
+
 .button { 
     width: 40px;
     height: 40px;      
@@ -92,7 +98,7 @@ button:hover {
     display: none;
     flex: auto;
     justify-content: space-evenly;
-    @media (min-width: 768px) {
+    @media (min-width: 550px) {
         display: flex;
         flex: 1 1 auto;
         width: 160px;
@@ -101,15 +107,16 @@ button:hover {
     .button {
         margin-right: 16px;
     }
-    .buttonCall{
-        background-image: url("../img/button-call.svg");
-    }
-    .buttonChat{
-        background-image: url("../img/button-chat.svg");
-    }
-    .buttonProfile{
-        background-image: url("../img/button-profile.svg");
-    }
+    
+}
+.buttonCall{
+    background-image: url("../img/button-call.svg");
+}
+.buttonChat{
+    background-image: url("../img/button-chat.svg");
+}
+.buttonProfile{
+    background-image: url("../img/button-profile.svg");
 }
 .header__divider {
     width: 2px;
@@ -148,13 +155,13 @@ button:hover {
 
 .mainSection {
     background-color: $bgColor-smoke;
-    position: relative;  
+    position: relative;   
         .mainSection__header {
             @media (min-width: 1366px) {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                height: 40px;
+                height: 40px;                
                 margin: 42px 0 8px 0;
                 padding-left: 32px;
             }
@@ -244,14 +251,16 @@ button:hover {
 .mainSection__item:hover {
     text-decoration: underline;
 }
-.mainSection__item-active {
-    background-color: $bgColor-white;
-    border: 2px solid $borderColor-lightBlue;
-    border-radius: 6px;   
-    outline: none; 
-        span {    
-            white-space: nowrap;
-        }
+.mainSection__item {     
+    &.active {
+        background-color: $bgColor-white;
+        border: 2px solid $borderColor-lightBlue;
+        border-radius: 6px;   
+        outline: none;
+    }
+    span {    
+        white-space: nowrap;
+    }
 }
 .mainSection__article {
     @media (min-width: 768px) {

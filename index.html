@@ -6,8 +6,89 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>my-project</title>
 </head>
-<body>   
-    <div class="wrapper"> 
+<body>     
+    <div class="modalWindow__feedback">
+        <div class="modalWindow__overlay">
+            <div class="modalWindow">
+                <button class="modalWindow__closeFeedback button"></button>
+                <div class="modalWindow__header">                
+                    <span class="modalWindow__title">Обратная связь</span>                
+                </div>
+                <div class="modalWindow__body">
+                    <form class="modalWindow__form"action="#" method="post" >
+                        <input class="modalWindow__input" type="text" name="name" placeholder="Имя">
+                        <input class="modalWindow__input" type="tel" name="telephone" placeholder="Телефон">
+                        <input class="modalWindow__input" type="email" name="email" placeholder="Электронная почта">
+                        <textarea class="modalWindow__textarea" name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                        <p class="modalWindow__agreement">Нажимая "отправить", вы даёте согласие на 
+                            <span class="pinkText">обработку персональных данных</span> и соглашаетесь с нашей
+                            <span class="pinkText">политикой конфиденциальности</span>
+                        </p>
+                        <button class="modalWindow_toSend">отправить<div></div></button>
+                    </form>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <div class="modalWindow__orderCall">
+        <div class="modalWindow__overlay">
+            <div class="modalWindow">
+                <button class="modalWindow__closeOrderCall button"></button>
+                <div class="modalWindow__header">                
+                    <span class="modalWindow__title">Заказать звонок</span>                
+                </div>
+                <div class="modalWindow__body">
+                    <form class="modalWindow__form"action="#" method="post" >                        
+                        <input class="modalWindow__input" type="tel" name="telephone" placeholder="Телефон">
+                        <p class="modalWindow__agreement">Нажимая "отправить", вы даёте согласие на 
+                            <span class="pinkText">обработку персональных данных</span> и соглашаетесь с нашей
+                            <span class="pinkText">политикой конфиденциальности</span>
+                        </p>
+                        <button class="modalWindow_toSend">отправить<div></div></button>
+                    </form>
+                </div>            
+            </div>
+        </div>
+    </div>
+<div class="wrap">
+    <div class="main-menu">
+        <div class="main-menu__header">
+            <button class="close-menu button"></button>                
+            <div class="logo"></div>
+            <button class="main-menu__search button"></button>     
+        </div>
+        <div>           
+            <ul class="nav-list">
+                <li class="nav-list__item"><a href="#">Ремонт техники</a></li>
+                <li class="nav-list__item active"><a href="#">Услуги и сервисы</a></li>
+                <li class="nav-list__item"><a href="#">Корпоративным клиентам</a></li>
+                <li class="nav-list__item"><a href="#">Продавцам техники</a></li>
+                <li class="nav-list__item"><a href="#">Партнерам</a></li>
+                <li class="nav-list__item"><a href="#" >Производителям</a></li>
+                <li class="nav-list__item"><a href="#">Наши сервисные центры</a></li>
+                <li class="nav-list__item"><a href="#">Контакты</a></li>
+            </ul>          
+        </div>
+        <div class="contacts">
+            <div class="contacts__button">
+                <button class="main-menu__buttonCall button"></button>
+                <button class="main-menu__buttonChat button"></button>
+                <button class="main-menu__buttonProfile button"></button>
+            </div>
+            <div class="contacts__email">
+                <a href="#">mail@cps.com</a>
+            </div>
+            <div class="contacts__tel">
+                <a href="#">8 800 890 8900</a>
+            </div>
+            <div class="lang">
+                <button class="active">RU</button>
+                <button>EN</button>
+                <button>CH</buttonclass="active">
+            </div> 
+        </div>           
+    </div>          
+    <div class="mainContent">                
         <header>
             <div class="header__leftCol">                
                 <button class="buttonMenu button"></button>                   
@@ -41,7 +122,7 @@
                 </div>    
             </div>
             <div class="mainSection__nav">     
-                <button class="mainSection__item-active"><span>Ремонтируемые бренды</span></button>  
+                <button class="mainSection__item active"><span>Ремонтируемые бренды</span></button>  
                 <button class="mainSection__item"><span>Ремонтируемые устройства</span></button>
                 <button class="mainSection__item"><span>Цены на услуги</span></button>
                 <button class="mainSection__item"><span>Адреса сервисных центров</span></button>
@@ -237,6 +318,7 @@
             <span class="footer__offer">Информация, размещенная на данной странице, не является публичной офертой</span>
         </footer>
     </div>
+</div>
     <script src="src/js/swiper.min.js"></script>
 </body>
 </html>

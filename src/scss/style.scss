@@ -8,6 +8,7 @@ $borderColor-lightBlue: #B8FFEC;
 $text-black: #1B1C21;
 $text-gray: #7E7E82;
 $BottomBorder: #D9FFF5;
+$borderGray: #eaeaea;
 
 
 @font-face {     
@@ -29,6 +30,8 @@ $BottomBorder: #D9FFF5;
   font-weight: 700; 
 }  
 @import 'mainPage';
+@import 'mainMenu';
+@import 'modalWindows';
 @import 'swiper.min';
 @import 'style-swiper';
 @import 'style-swiper-pricesOfServices';

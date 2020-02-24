@@ -142,6 +142,30 @@ for(var i=0; i<mainSectionNavItems.length; i++) {
 
 
 //основное меню
+// var mainMenu = document.querySelector('.mainMenu__wrapper');
+// var buttonMenu = document.querySelector('.buttonMenu');
+// buttonMenu.addEventListener('click', function(evt){
+//     evt.preventDefault();
+//     mainMenu.classList.add('mainMenu_open');
+// });
+// var closeMenu = mainMenu.querySelector('.mainMenu__close');
+// closeMenu.addEventListener('click', function(evt) {
+//     evt.preventDefault();
+//     mainMenu.classList.remove('mainMenu_open');
+// });
+// document.addEventListener('keydown', function(evt) {    
+//     if(evt.keyCode === 27) {
+//         mainMenu.classList.remove('mainMenu_open');       
+//     };
+// });
+// var overlayMainMenu = mainMenu.querySelector('.mainMenu__overlay');
+// overlayMainMenu.addEventListener('click', function(evt) {
+//     evt.preventDefault();
+//     mainMenu.classList.remove('mainMenu_open');
+//     mainMenu.classList.add('hidingMainMenu');
+//     setTimeout(() => mainMenu.classList.remove('hidingMainMenu'), 500);
+// });
+
 var mainMenu = document.querySelector('.mainMenu');
 var buttonMenu = document.querySelector('.buttonMenu');
 buttonMenu.addEventListener('click', function(evt){
@@ -257,28 +281,75 @@ if (document.body.clientWidth < 768) {
         }         
     });
 }
-
-
-// var breakpoint = window.matchMedia( '(min-width:768px)');
-// var mySwiper;
-// var breakPointChecked = function() {
-//     if (breakpoint.matches === true) {
-//         if (mySwiper !== undefined) {
-//             mySwiper.destroy(true,true);
-//         }
-//         return;
-//     } else if (breakpoint.matches === false) {
-//             return enableSwiper();
-//         }
-//     };
-// var enableSwiper = function() {
-//     var mySwiper = new Swiper('.swiper-container', {
-//         width:240,
-//         spaceBetween:16,
-//         pagination: {
-//             el: '.swiper-pagination'
-//         }         
-//     });
+// {
+//     let swiperContentNav,
+//       swiperBrandList,
+//       swiperTypeList,
+//       swiperPriceList;
+//   ​
+//     let swiperSettings = {
+//       slidesPerView: 'auto',
+//       slidesOffsetBefore: 16,
+//       slidesOffsetAfter: 16,
+//       spaceBetween: 16,
+//       pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//       },
+//       breakpoints: {
+//         // when window width is >= MOBILE_PLUS_WIDTH
+//         360: {
+//           slidesOffsetBefore: 24,
+//           slidesOffsetAfter: 24,
+//           spaceBetween: 24,
+//         },
+//       }
+//     }
+//   ​
+//     let swiperSettingsNav = {
+//       slidesPerView: 'auto',
+//       slidesOffsetBefore: 16,
+//       slidesOffsetAfter: 16,
+//       spaceBetween: 4,
+//       breakpoints: {
+//         // when window width is >= MOBILE_PLUS_WIDTH
+//         360: {
+//           slidesOffsetBefore: 24,
+//           slidesOffsetAfter: 24,
+//           spaceBetween: 8,
+//         },
+//       }
+//     }
+// if (window.innerWidth < TABLET_WIDTH) {
+//     swiperBrandList = new Swiper('.brand-list', swiperSettings)
+//     swiperTypeList = new Swiper('.type-list', swiperSettings)
+//     swiperPriceList = new Swiper('.price-list', swiperSettings)
+//   }
+// ​
+//   if (window.innerWidth < DESKTOP_WIDTH) {
+//     swiperContentNav = new Swiper('.content-nav', swiperSettingsNav);
+//   }
+// ​
+//   const swiperToggle = function (evt) {
+//     if (window.innerWidth >= TABLET_WIDTH) {
+//       if (swiperBrandList) swiperBrandList.destroy();
+//       if (swiperTypeList) swiperTypeList.destroy();
+//       if (swiperPriceList) swiperPriceList.destroy();
+//     } else {
+//       swiperBrandList = new Swiper('.brand-list', swiperSettings)
+//       swiperTypeList = new Swiper('.type-list', swiperSettings)
+//       swiperPriceList = new Swiper('.price-list', swiperSettings)
+//     }
+// ​
+//     if (window.innerWidth >= DESKTOP_WIDTH) {
+//       if (swiperContentNav) swiperContentNav.destroy();
+//     } else {
+//       swiperContentNav = new Swiper('.content-nav', swiperSettingsNav);
+//     }
+//   };
+// ​
+//   window.addEventListener('resize', debounce(swiperToggle,
+//     200, false), false);
 // }
-// breakpoint.addListener(breakPointChecked);
-// breakPointChecked();
+
+

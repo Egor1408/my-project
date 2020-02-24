@@ -478,20 +478,26 @@ button:hover {
       margin: 42px 0 8px 0;
       padding-left: 32px; } }
 
-.mainSection__button .buttonRepair, .mainSection__button .buttonSearch {
+.mainSection__button button {
   margin-right: 32px;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  outline: none;
+  border: none;
+  background-color: #F8F8F8;
+  color: #1B1C21; }
+  .mainSection__button button span {
+    margin-right: 8px;
+    text-align: right;
+    font-weight: 500; }
+  .mainSection__button button:hover span {
+    text-decoration: underline; }
 
-.mainSection__button .buttonRepair button {
+.mainSection__button .buttonRepair div {
   background-image: url(./static/button-repair.svg); }
 
-.mainSection__button .buttonSearch button {
+.mainSection__button .buttonSearch div {
   background-image: url(./static/button-search.svg); }
-
-.mainSection__button span {
-  margin-right: 8px;
-  text-align: right; }
 
 .mainSection__title {
   font-size: 28px;
@@ -599,6 +605,8 @@ button:hover {
   background-color: #F8F8F8;
   outline: none;
   position: relative; }
+  .article__button:hover {
+    text-decoration: underline; }
 
 .article__button > span {
   margin-left: 16px;
@@ -621,7 +629,7 @@ button:hover {
       max-width: 800px;
       border-radius: 10px; } }
 
-.main-menu {
+.mainMenu {
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -635,31 +643,31 @@ button:hover {
   transition-duration: 0.5s;
   position: fixed; }
   @media (min-width: 1366px) {
-    .main-menu {
+    .mainMenu {
       position: relative;
       transform: translateX(0);
       box-shadow: none; } }
-  .main-menu.main-menu_open {
+  .mainMenu.mainMenu_open {
     transform: translateX(0px); }
-  .main-menu .nav-list {
+  .mainMenu .nav-list {
     margin-top: 0;
     padding: 0; }
-  .main-menu .nav-list__item {
+  .mainMenu .nav-list__item {
     list-style: none;
     padding-bottom: 20px;
     position: relative; }
     @media (min-height: 750px) {
-      .main-menu .nav-list__item {
+      .mainMenu .nav-list__item {
         padding-bottom: 28px; } }
     @media (min-height: 850px) {
-      .main-menu .nav-list__item {
+      .mainMenu .nav-list__item {
         padding-bottom: 32px; } }
-    .main-menu .nav-list__item a {
+    .mainMenu .nav-list__item a {
       text-decoration: none;
       color: #1B1C21; }
-    .main-menu .nav-list__item.active a {
+    .mainMenu .nav-list__item.active a {
       color: #7E7E82; }
-    .main-menu .nav-list__item.active::after {
+    .mainMenu .nav-list__item.active::after {
       content: "";
       background-color: #41F6D7;
       border-radius: 0 6px 6px 0;
@@ -669,23 +677,23 @@ button:hover {
       left: -24px;
       top: -4px; }
 
-.main-menu__header {
+.mainMenu__header {
   height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  .main-menu__header .close-menu {
+  .mainMenu__header .mainMenu__close {
     background-image: url(./static/button-closed.svg);
     margin-right: 16px; }
     @media (min-width: 1366px) {
-      .main-menu__header .close-menu {
+      .mainMenu__header .mainMenu__close {
         display: none; } }
-  .main-menu__header .logo {
+  .mainMenu__header .logo {
     flex: 1;
     height: 52px;
     background-image: url(./static/logo.svg);
     background-repeat: no-repeat; }
-  .main-menu__header .main-menu__search {
+  .mainMenu__header .mainMenu__search {
     background-image: url(./static/button-search-main-menu.svg); }
 
 .contacts {
@@ -697,11 +705,11 @@ button:hover {
 
 .contacts__button {
   display: flex; }
-  .contacts__button .main-menu__buttonCall {
+  .contacts__button .mainMenu__buttonCall {
     background-image: url(./static/button-call.svg); }
-  .contacts__button .main-menu__buttonChat {
+  .contacts__button .mainMenu__buttonChat {
     background-image: url(./static/button-chat.svg); }
-  .contacts__button .main-menu__buttonProfile {
+  .contacts__button .mainMenu__buttonProfile {
     background-image: url(./static/button-profile.svg); }
 
 .contacts__button button {

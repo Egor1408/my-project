@@ -168,25 +168,34 @@ button:hover {
         }
 }
 .mainSection__button {
-    .buttonRepair, .buttonSearch {
+    button {
         margin-right: 32px;
         display: flex;
         align-items: center;
+        outline: none;
+        border: none;
+        background-color: $bgColor-smoke;
+        color:$text-black;
+            span { 
+                margin-right: 8px;         
+                text-align: right; 
+                font-weight: 500;       
+            }
+            &:hover span {
+                text-decoration: underline;
+            }       
     }
     .buttonRepair {
-        button {
+        div {
             background-image: url("../img/button-repair.svg");  
         }
     }
     .buttonSearch {
-        button {
+        div {
             background-image: url("../img/button-search.svg");  
         }
     }
-    span { 
-        margin-right: 8px;         
-        text-align: right;        
-    }
+    
 }
 
 
@@ -301,6 +310,9 @@ button:hover {
     background-color: #F8F8F8;
     outline: none;  
     position: relative;  
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .article__button>span {    

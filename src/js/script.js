@@ -1,11 +1,12 @@
 // модалки
+//обратная связь
 var modalFeedback = document.querySelector('.modalWindow__feedback');
 var openModalFeedback = document.querySelector('.buttonChat');
 openModalFeedback.addEventListener('click', function(evt){
     evt.preventDefault();    
     modalFeedback.classList.add('openFeedback');
 });
-var openModalFeedbackMM = document.querySelector('.main-menu__buttonChat');
+var openModalFeedbackMM = document.querySelector('.mainMenu__buttonChat');
 openModalFeedbackMM.addEventListener('click', function(evt){
     evt.preventDefault();    
     modalFeedback.classList.add('openFeedback');
@@ -32,7 +33,7 @@ overlayFeedback.addEventListener('click', function(evt) {
     setTimeout(() => modalFeedback.classList.remove('hidingFeedback'), 500);
 });
 
-
+//заказать звонок
 
 var modalOrderCall = document.querySelector('.modalWindow__orderCall');
 var openModalOrderCall = document.querySelector('.buttonCall');
@@ -40,7 +41,7 @@ openModalOrderCall.addEventListener('click', function(evt){
     evt.preventDefault();    
     modalOrderCall.classList.add('openOrderCall');
 });
-var openModalOrderCallMM = document.querySelector('.main-menu__buttonCall');
+var openModalOrderCallMM = document.querySelector('.mainMenu__buttonCall');
 openModalOrderCallMM.addEventListener('click', function(evt){
     evt.preventDefault();    
     modalOrderCall.classList.add('openOrderCall');
@@ -69,7 +70,9 @@ overlayOrderCall.addEventListener('click', function(evt) {
 
 
 
-//main-menu active
+
+//навигация mainMenu
+
 var navItems = document.querySelectorAll('.nav-list__item');
 var itemClick = function(key) {
     key.addEventListener('click', function(evt){
@@ -90,6 +93,8 @@ for(var i=0; i<navItems.length; i++) {
     var item = navItems[i];
     itemClick(item);         
 };
+
+//кнопки смены языка
 
 var langButtons = document.querySelectorAll('.lang button');
 var langButtonClick = function(key) {
@@ -113,6 +118,7 @@ for(var i=0; i<langButtons.length; i++) {
 };
 
 //mainPage active
+//навигация
 var mainSectionNavItems = document.querySelectorAll('.mainSection__item');
 var mainMenuItemClick = function(key) {
     key.addEventListener('click', function(evt){
@@ -135,30 +141,31 @@ for(var i=0; i<mainSectionNavItems.length; i++) {
 };
 
 
-//меню
-var mainMenu = document.querySelector('.main-menu');
+//основное меню
+var mainMenu = document.querySelector('.mainMenu');
 var buttonMenu = document.querySelector('.buttonMenu');
 buttonMenu.addEventListener('click', function(evt){
     evt.preventDefault();
-    mainMenu.classList.add('main-menu_open');
+    mainMenu.classList.add('mainMenu_open');
 });
-var closeMenu = mainMenu.querySelector('.close-menu');
+var closeMenu = mainMenu.querySelector('.mainMenu__close');
 closeMenu.addEventListener('click', function(evt) {
     evt.preventDefault();
-    mainMenu.classList.remove('main-menu_open');
+    mainMenu.classList.remove('mainMenu_open');
 });
 document.addEventListener('keydown', function(evt) {    
     if(evt.keyCode === 27) {
-        mainMenu.classList.remove('main-menu_open');       
+        mainMenu.classList.remove('mainMenu_open');       
     };
 });
 window.addEventListener('click', function(evt) {   
     evt.preventDefault(); 
-    if(mainMenu.classList.contains('main-menu_open') && !mainMenu.contains(evt.target) && !buttonMenu.contains(evt.target)) {   
-        mainMenu.classList.remove('main-menu_open');        
+    if(mainMenu.classList.contains('mainMenu_open') && !mainMenu.contains(evt.target) && !buttonMenu.contains(evt.target)) {   
+        mainMenu.classList.remove('mainMenu_open');        
     }
 });
 //кнопки - показать всё
+//бренды
 var openSwiperBrands = document.querySelector('.button__brands');
 var brands = document.querySelector('.swiper-container__brands');
 var swiperBrands = brands.querySelector('.swiper-wrapper');
@@ -176,6 +183,9 @@ openSwiperBrands.addEventListener('click', function(evt){
         swiperImgBrands.style.transform = "rotate(180deg)";
     }    
 });
+
+//виды техники
+
 var openSwiperTechniks = document.querySelector('.button__technics');
 var techniks = document.querySelector('.swiper-container__technics');
 var wrapperTechniks = techniks.querySelector('.swiper-wrapper');
@@ -215,6 +225,8 @@ articleButton.addEventListener('click', function(evt){
 } )
 
 //свиперы
+
+import Swiper from '../js/swiper.min.js'
 if (document.body.clientWidth < 768) {
     var mySwiper1 = new Swiper('.swiper-container__technics', {
         width:240,

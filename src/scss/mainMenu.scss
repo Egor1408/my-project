@@ -1,4 +1,4 @@
-.main-menu {
+.mainMenu {
     width: 320px;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
         transform: translateX(0);
         box-shadow: none;       
     }
-    &.main-menu_open {
+    &.mainMenu_open {
         transform: translateX(0px); 
     }
     .nav-list{
@@ -52,13 +52,12 @@
         }
     }    
 }
-
-.main-menu__header {
+.mainMenu__header {
     height: 110px;   
     display: flex;
     align-items: center;    
     justify-content: space-between;  
-    .close-menu  {
+    .mainMenu__close  {
         background-image: url('../img/button-closed.svg');
         @media (min-width: 1366px) {
             display: none;
@@ -72,13 +71,10 @@
         background-repeat: no-repeat;
     
     }
-    .main-menu__search {
+    .mainMenu__search {
         background-image: url('../img/button-search-main-menu.svg');
     }
 }
-
-
-
 .contacts {
     position: absolute;
     bottom: 32px;
@@ -89,13 +85,13 @@
 }
 .contacts__button {
     display: flex; 
-    .main-menu__buttonCall {
+    .mainMenu__buttonCall {
         background-image: url("../img/button-call.svg");
     }  
-    .main-menu__buttonChat {
+    .mainMenu__buttonChat {
         background-image: url("../img/button-chat.svg");
     }
-    .main-menu__buttonProfile {
+    .mainMenu__buttonProfile {
         background-image: url("../img/button-profile.svg");
     }
 }

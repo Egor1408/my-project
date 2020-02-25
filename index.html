@@ -78,10 +78,11 @@
                         <button class="mainMenu__buttonProfile button"></button>
                     </div>
                     <div class="contacts__email">
-                        <a href="#">mail@cps.com</a>
+                        <a href="mailto:mail@cps.com">mail@cps.com</a>
                     </div>
                     <div class="contacts__tel">
-                        <a href="#">8 800 890 8900</a>
+                        <a href="tel:88008908900">8 800 890 8900</a>
+                        
                     </div>
                     <div class="lang">
                         <button class="active">RU</button>
@@ -126,9 +127,9 @@
                 </div>    
             </div>
             <div class="mainSection__nav">     
-                <button class="mainSection__item active"><span>Ремонтируемые бренды</span></button>  
-                <button class="mainSection__item"><span>Ремонтируемые устройства</span></button>
-                <button class="mainSection__item"><span>Цены на услуги</span></button>
+                <button class="mainSection__item" onclick="window.location.href='#brands'"><span>Ремонтируемые бренды</span></button>  
+                <button class="mainSection__item" onclick="window.location.href='#technics'"><span>Ремонтируемые устройства</span></button>
+                <button class="mainSection__item" onclick="window.location.href='#prices'"><span>Цены на услуги</span></button>
                 <button class="mainSection__item"><span>Адреса сервисных центров</span></button>
                 <button class="mainSection__item"><span>Специальные цены</span></button>
                 <button class="mainSection__item"><span>Отзывы</span></button>
@@ -154,7 +155,7 @@
                 </div>
             </div>
         </section> 
-        <div class="swiper-container__brands">
+        <div class="swiper-container__brands" id="brands">
             <div class="swiper-title">
                 <span>ремонт техники различных брендов</span>
             </div>
@@ -200,7 +201,7 @@
                 </button> 
             </div>
         </div>
-        <div class="swiper-container__technics">
+        <div class="swiper-container__technics" id="technics">
             <div class="swiper-title">
                 <span>ремонт различных видов техники</span>
             </div>
@@ -246,7 +247,7 @@
                 </button> 
             </div>
         </div>
-        <div class="swiper-container__pricesOfServices">
+        <div class="swiper-container__pricesOfServices" id="prices">
             <div class="swiper-title">
                 <span>цены на услуги</span>
             </div>

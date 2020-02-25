@@ -554,18 +554,11 @@ button:hover {
     white-space: nowrap;
     margin: auto;
     padding: 0 16px; }
-
-.mainSection__item:hover {
-  text-decoration: underline; }
-
-.mainSection__item.active {
-  background-color: #fff;
-  border: 2px solid #B8FFEC;
-  border-radius: 6px;
-  outline: none; }
-
-.mainSection__item span {
-  white-space: nowrap; }
+  .mainSection__item:hover {
+    background-color: #fff;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    outline: none; }
 
 @media (min-width: 768px) {
   .mainSection__article {
@@ -665,6 +658,10 @@ button:hover {
     .mainMenu .nav-list__item a {
       text-decoration: none;
       color: #1B1C21; }
+    .mainMenu .nav-list__item:hover {
+      text-shadow: 2px 2px 2px #41F6D7; }
+      .mainMenu .nav-list__item:hover.active {
+        text-shadow: none; }
     .mainMenu .nav-list__item.active a {
       color: #7E7E82; }
     .mainMenu .nav-list__item.active::after {
@@ -718,23 +715,28 @@ button:hover {
 .contacts__tel {
   margin-top: 12px;
   font-weight: bold; }
+  .contacts__tel:hover {
+    text-decoration: underline; }
+
+.contacts__email:hover {
+  text-decoration: underline; }
 
 .lang {
   margin-top: 40px; }
-
-.lang button {
-  border: 0;
-  outline: none;
-  background-color: #fff;
-  color: #1B1C21;
-  font-weight: 500;
-  padding: 0 7px 0 0; }
-
-button.active {
-  color: #7E7E82; }
-
-.lang button:hover {
-  cursor: pointer; }
+  .lang button {
+    border: 0;
+    outline: none;
+    background-color: #fff;
+    color: #1B1C21;
+    font-weight: 500;
+    padding: 0 7px 0 0; }
+    .lang button.active {
+      color: #7E7E82; }
+      .lang button.active:hover {
+        text-decoration: none; }
+    .lang button:hover {
+      cursor: pointer;
+      text-decoration: underline; }
 
 .modalWindow__overlay, .modalWindow {
   opacity: 0;

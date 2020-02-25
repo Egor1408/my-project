@@ -248,6 +248,8 @@ articleButton.addEventListener('click', function(evt){
     }
 } )
 
+
+
 //свиперы
 
 import Swiper from '../js/swiper.min.js'

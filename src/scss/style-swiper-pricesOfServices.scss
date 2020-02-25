@@ -101,9 +101,14 @@
     }
 
     .swiper-slide__goOrder { 
+        @media (min-width: 768px) {       
+            display: table-cell;  
+            border-bottom: 1px solid #eaeaea;
+        }
         button{       
             display: flex;
             justify-content: space-around;
+            align-items: center;
             width: 119px;
             height: 32px;
             border-radius: 16px;
@@ -111,7 +116,7 @@
             outline: none;
             font-size: 12px;
             line-height: 24px;
-            text-align: right;
+            text-align: right;            
             letter-spacing: -0.15px;
             text-transform: uppercase;
             color: $bgColor-white;
@@ -119,28 +124,34 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            margin: 16px;
-            div{  
-                height: 24px;
-                width: 24px;                      
-                background-image: url('../img/goOrder.svg'); 
-            }
-            @media (min-width: 768px) {       
-                position: relative; 
-                left: 20%;                               
-            }
-            @media (min-width: 950px) {                 
-                left: 30%;                               
-            }
-            @media (min-width: 1100px) {                 
-                left: 40%;                               
-            }
-        }        
-        @media (min-width: 768px) {       
-            display: table-cell;  
-            border-bottom: 1px solid #eaeaea;
-                  
+            margin: 16px;            
+                &:hover {                    
+                    cursor: pointer;
+                    color: $bgColor-pink;
+                    background-color: $bgColor-white;
+                    border: 1px solid $bgColor-pink
+                }
+                &:hover div{
+                    background-image: url('../img/goOrder__hover.svg'); 
+                }                
+                div{  
+                    height: 24px;
+                    width: 24px;                     
+                    background-image: url('../img/goOrder.svg'); 
+                    transform: translateX(5px);
+                }
+                @media (min-width: 768px) {       
+                    position: relative; 
+                    left: 20%;                               
+                }
+                @media (min-width: 950px) {                 
+                    left: 30%;                               
+                }
+                @media (min-width: 1100px) {                 
+                    left: 40%;                               
+                }
         }
+          
     }
 }
 .ndsText {

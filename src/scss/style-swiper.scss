@@ -58,7 +58,12 @@
     display: flex;
     position: relative;
     left: 148px; 
-    background-image: url('../img/go.svg');       
+    background-image: url('../img/go.svg');   
+    outline: none;
+    &:hover {
+        cursor: pointer;        
+        background-image: url('../img/go__hover.svg');        
+    }    
 }
 .lenovo {
     background: url("../img/logo-lenovo.svg") no-repeat 16px 50%;

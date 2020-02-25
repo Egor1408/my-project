@@ -56,17 +56,15 @@ html {
     justify-content: center; 
     transition-property: background-color, box-shadow;
     transition-duration: 0.3s;
-}
-.button:focus {
-    border: 0;
-    outline: none;
-}
-.button:hover {    
-    background-color: #ff1947;
-    box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5);
-}
-button:hover {
-    cursor: pointer;
+        &:focus {
+            border: 0;
+            outline: none;
+        }
+        &:hover {    
+            background-color: #ff1947;
+            box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5);
+            cursor: pointer;
+        }
 }
 .header__leftCol {
     display: flex;
@@ -180,15 +178,21 @@ button:hover {
                 margin-right: 8px;         
                 text-align: right; 
                 font-weight: 500;       
-            }
+            }  
             &:hover span {
                 text-decoration: underline;
-            }       
+                cursor: pointer;
+            }
+            &:hover div {
+                background-color: #ff1947;
+                box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5);
+                cursor: pointer;
+            }                
     }
     .buttonRepair {
         div {
             background-image: url("../img/button-repair.svg");  
-        }
+        }        
     }
     .buttonSearch {
         div {
@@ -262,20 +266,10 @@ button:hover {
             border: 2px solid $borderColor-lightBlue;
             border-radius: 6px;   
             outline: none;
+            cursor: pointer;
         }    
 }
 
-// .mainSection__item {     
-//     &.active {
-//         background-color: $bgColor-white;
-//         border: 2px solid $borderColor-lightBlue;
-//         border-radius: 6px;   
-//         outline: none;
-//     }
-//     span {    
-//         white-space: nowrap;
-//     }
-// }
 .mainSection__article {
     @media (min-width: 768px) {
         display: flex;
@@ -340,4 +334,17 @@ button:hover {
             max-width: 800px;
             border-radius: 10px;
         }
+}
+
+.footer__politics {
+    a{
+        text-decoration: none;
+        color: $text-gray;
+    }
+    &:hover {
+        a{
+            text-decoration: underline;
+        }
+    }
+
 }

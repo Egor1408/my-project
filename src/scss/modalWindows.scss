@@ -147,6 +147,10 @@
     .modalWindow__agreement {        
         .pinkText {
             color: $bgColor-pink;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     .modalWindow_toSend {         

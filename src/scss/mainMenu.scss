@@ -73,8 +73,16 @@
             text-decoration: none;    
             color: $text-black;
         }
+        &:hover {
+            // text-decoration: underline;
+            text-shadow: 2px 2px 2px $bgColor-blue;
+            &.active {
+                text-shadow: none;
+            }
+        }
         &.active a {
             color: $text-gray;  
+          
         } 
         &.active::after {
             content:"";    
@@ -137,22 +145,33 @@
 .contacts__tel {
     margin-top: 12px;
     font-weight: bold;
+    &:hover {
+       text-decoration: underline; 
+    }
+}
+.contacts__email {
+    &:hover {
+        text-decoration: underline;
+    }
 }
 .lang {
     margin-top: 40px ;
-}
-.lang button {   
-    border: 0;    
-    outline: none; 
-    background-color: $bgColor-white;
-    color: $text-black;
-    font-weight: 500;
-    padding: 0 7px 0 0;     
-}
-button.active {
-    color: $text-gray;    
-}
-
-.lang button:hover {
-    cursor: pointer;
+        button {   
+            border: 0;    
+            outline: none; 
+            background-color: $bgColor-white;
+            color: $text-black;
+            font-weight: 500;
+            padding: 0 7px 0 0;  
+            &.active {
+                color: $text-gray; 
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }   
 }

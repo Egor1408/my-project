@@ -255,22 +255,27 @@ button:hover {
             white-space: nowrap;    
             margin: auto;
             padding: 0 16px;    
-        }       
+        }  
+        
+        &:hover {
+            background-color: $bgColor-white;
+            border: 2px solid $borderColor-lightBlue;
+            border-radius: 6px;   
+            outline: none;
+        }    
 }
-.mainSection__item:hover {
-    text-decoration: underline;
-}
-.mainSection__item {     
-    &.active {
-        background-color: $bgColor-white;
-        border: 2px solid $borderColor-lightBlue;
-        border-radius: 6px;   
-        outline: none;
-    }
-    span {    
-        white-space: nowrap;
-    }
-}
+
+// .mainSection__item {     
+//     &.active {
+//         background-color: $bgColor-white;
+//         border: 2px solid $borderColor-lightBlue;
+//         border-radius: 6px;   
+//         outline: none;
+//     }
+//     span {    
+//         white-space: nowrap;
+//     }
+// }
 .mainSection__article {
     @media (min-width: 768px) {
         display: flex;

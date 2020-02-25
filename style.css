@@ -377,17 +377,13 @@ header {
   justify-content: center;
   transition-property: background-color, box-shadow;
   transition-duration: 0.3s; }
-
-.button:focus {
-  border: 0;
-  outline: none; }
-
-.button:hover {
-  background-color: #ff1947;
-  box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5); }
-
-button:hover {
-  cursor: pointer; }
+  .button:focus {
+    border: 0;
+    outline: none; }
+  .button:hover {
+    background-color: #ff1947;
+    box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5);
+    cursor: pointer; }
 
 .header__leftCol {
   display: flex;
@@ -491,7 +487,12 @@ button:hover {
     text-align: right;
     font-weight: 500; }
   .mainSection__button button:hover span {
-    text-decoration: underline; }
+    text-decoration: underline;
+    cursor: pointer; }
+  .mainSection__button button:hover div {
+    background-color: #ff1947;
+    box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5);
+    cursor: pointer; }
 
 .mainSection__button .buttonRepair div {
   background-image: url(./static/button-repair.svg); }
@@ -558,7 +559,8 @@ button:hover {
     background-color: #fff;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
-    outline: none; }
+    outline: none;
+    cursor: pointer; }
 
 @media (min-width: 768px) {
   .mainSection__article {
@@ -621,6 +623,13 @@ button:hover {
     .mainSection__picture > img {
       max-width: 800px;
       border-radius: 10px; } }
+
+.footer__politics a {
+  text-decoration: none;
+  color: #7E7E82; }
+
+.footer__politics:hover a {
+  text-decoration: underline; }
 
 .mainMenu {
   width: 320px;
@@ -868,7 +877,10 @@ button:hover {
     border: 1px solid #eaeaea;
     padding: 12px 0 0 16px; }
   .modalWindow__form .modalWindow__agreement .pinkText {
-    color: #FF3E79; }
+    color: #FF3E79;
+    text-decoration: none; }
+    .modalWindow__form .modalWindow__agreement .pinkText:hover {
+      text-decoration: underline; }
   .modalWindow__form .modalWindow_toSend {
     display: flex;
     justify-content: space-around;
@@ -1423,7 +1435,11 @@ button.swiper-pagination-bullet {
   display: flex;
   position: relative;
   left: 148px;
-  background-image: url(./static/go.svg); }
+  background-image: url(./static/go.svg);
+  outline: none; }
+  .swiper-slide__button:hover {
+    cursor: pointer;
+    background-image: url(./static/go__hover.svg); }
 
 .lenovo {
   background: url(./static/logo-lenovo.svg) no-repeat 16px 50%; }
@@ -1584,9 +1600,14 @@ button.swiper-pagination-bullet {
     .swiper-container__pricesOfServices .swiper-slide__term {
       display: table-cell;
       border-bottom: 1px solid #eaeaea; } }
+  @media (min-width: 768px) {
+    .swiper-container__pricesOfServices .swiper-slide__goOrder {
+      display: table-cell;
+      border-bottom: 1px solid #eaeaea; } }
   .swiper-container__pricesOfServices .swiper-slide__goOrder button {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 119px;
     height: 32px;
     border-radius: 16px;
@@ -1603,10 +1624,18 @@ button.swiper-pagination-bullet {
     bottom: 0;
     right: 0;
     margin: 16px; }
+    .swiper-container__pricesOfServices .swiper-slide__goOrder button:hover {
+      cursor: pointer;
+      color: #FF3E79;
+      background-color: #fff;
+      border: 1px solid #FF3E79; }
+    .swiper-container__pricesOfServices .swiper-slide__goOrder button:hover div {
+      background-image: url(./static/goOrder__hover.svg); }
     .swiper-container__pricesOfServices .swiper-slide__goOrder button div {
       height: 24px;
       width: 24px;
-      background-image: url(./static/goOrder.svg); }
+      background-image: url(./static/goOrder.svg);
+      transform: translateX(5px); }
     @media (min-width: 768px) {
       .swiper-container__pricesOfServices .swiper-slide__goOrder button {
         position: relative;
@@ -1617,10 +1646,6 @@ button.swiper-pagination-bullet {
     @media (min-width: 1100px) {
       .swiper-container__pricesOfServices .swiper-slide__goOrder button {
         left: 40%; } }
-  @media (min-width: 768px) {
-    .swiper-container__pricesOfServices .swiper-slide__goOrder {
-      display: table-cell;
-      border-bottom: 1px solid #eaeaea; } }
 
 .ndsText {
   min-width: 288px;

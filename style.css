@@ -345,7 +345,7 @@ html {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-left: 1px solid #D9FFF5; }
+  border-left: 1px solid #B8FFEC; }
   @media (min-width: 1366px) {
     .mainContent {
       margin: auto; } }
@@ -438,9 +438,8 @@ header {
   background-repeat: no-repeat; }
   @media (min-width: 320px) {
     .header__divider {
-      flex: 1 1 auto;
-      justify-content: flex-start; } }
-  @media (min-width: 768px) {
+      flex: 1 1 auto; } }
+  @media (min-width: 550px) {
     .header__divider {
       flex: 0 1 auto;
       width: 2px; } }
@@ -464,7 +463,8 @@ header {
 
 .mainSection {
   background-color: #F8F8F8;
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #D9FFF5; }
   @media (min-width: 1366px) {
     .mainSection .mainSection__header {
       display: flex;
@@ -535,7 +535,7 @@ header {
   overflow-y: hidden;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none; }
-  @media (min-width: 1120px) {
+  @media (min-width: 768px) {
     .mainSection__nav {
       flex-wrap: wrap; } }
 
@@ -548,9 +548,10 @@ header {
   height: 40px;
   color: #7E7E82;
   background-color: #F8F8F8;
+  border: 2px solid #F8F8F8;
   outline: none;
-  border: none;
-  font-size: 16px; }
+  font-size: 16px;
+  font-weight: 500; }
   .mainSection__item span {
     white-space: nowrap;
     margin: auto;
@@ -576,8 +577,19 @@ header {
 
 .article__text {
   font-weight: 400;
+  line-height: 20px;
   max-width: 490px;
-  overflow: hidden; }
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.text__wrap {
+  -moz-column-width: 320px;
+  column-width: 320px;
+  height: 100%; }
+  .text__wrap p {
+    margin-top: 0;
+    padding-top: 0; }
 
 .article__text p:first-child {
   margin-bottom: 16px; }
@@ -597,6 +609,7 @@ header {
   padding-left: 8px;
   margin-top: 16px;
   border: 0;
+  font-weight: 500;
   background-color: #F8F8F8;
   outline: none;
   position: relative; }
@@ -631,21 +644,63 @@ header {
 .footer__politics:hover a {
   text-decoration: underline; }
 
+.mainMenu__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background 0.5s ease-in;
+  opacity: 0;
+  z-index: -1; }
+  @media (min-width: 1366px) {
+    .mainMenu__overlay {
+      position: relative;
+      opacity: 1;
+      z-index: 100;
+      width: 320px; } }
+
+.mainMenu__wrapper.mainMenu_open .mainMenu__overlay {
+  opacity: 1;
+  z-index: 900; }
+
+.mainMenu__wrapper.mainMenu_open .mainMenu {
+  transform: translateX(0px); }
+
+.mainMenu__wrapper.hidingMainMenu .mainMenu__overlay {
+  opacity: 1;
+  z-index: 900;
+  background-color: rgba(255, 255, 255, 0); }
+
+.mainMenu__wrapper.hidingMainMenu .mainMenu {
+  opacity: 1;
+  z-index: 900;
+  transform: translateX(-350px); }
+
+.mainMenu__wrapper.mainMenu_open .mainMenu {
+  transform: translateX(0px);
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2); }
+
 .mainMenu {
-  width: 320px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   height: 100vh;
   min-height: 676px;
   padding: 0 24px 0 24px;
-  transform: translateX(-320px);
+  transform: translateX(-415px);
   z-index: 100;
   background-color: #fff;
   transition-duration: 0.5s;
-  position: fixed; }
-  .mainMenu.mainMenu_open {
-    transform: translateX(0px);
-    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), 16px 0px 0 100vw rgba(255, 255, 255, 0.9); }
+  position: fixed;
+  border-left: 1px solid #B8FFEC; }
+  @media (orientation: landscape) {
+    .mainMenu {
+      width: 320px; } }
+  @media (min-width: 415px) {
+    .mainMenu {
+      width: 320px; } }
   @media (min-width: 1366px) {
     .mainMenu {
       position: relative;
@@ -890,6 +945,7 @@ header {
     border: none;
     outline: none;
     font-size: 12px;
+    font-weight: 700;
     line-height: 24px;
     text-align: right;
     letter-spacing: -0.15px;
@@ -1389,14 +1445,15 @@ button.swiper-pagination-bullet {
       height: auto; } }
 
 .swiper-title {
-  background: linear-gradient(270deg, #F8F8F8 0%, #fff 98.61%);
+  background: linear-gradient(90deg, #F8F8F8 1.39%, #fff 100%);
   text-transform: uppercase;
   color: #7E7E82;
   width: 100%;
-  padding: 16px; }
+  padding: 16px;
+  font-weight: 400; }
 
 .swiper-wrapper {
-  padding: 0 16px;
+  padding: 16px 16px 0 16px;
   height: 72px; }
   @media (min-width: 768px) {
     .swiper-wrapper {
@@ -1409,7 +1466,7 @@ button.swiper-pagination-bullet {
 
 .swiper-slide {
   background-color: #fff;
-  border: 1px solid #EAEAEA;
+  border: 1px solid #F8F8F8;
   border-radius: 6px;
   display: flex;
   justify-content: space-between;
@@ -1442,28 +1499,28 @@ button.swiper-pagination-bullet {
     background-image: url(./static/go__hover.svg); }
 
 .lenovo {
-  background: url(./static/logo-lenovo.svg) no-repeat 16px 50%; }
+  background: #fff url(./static/logo-lenovo.svg) no-repeat 16px 50%; }
 
 .samsung {
-  background: url(./static/logo-samsung.svg) no-repeat 16px 50%; }
+  background: #fff url(./static/logo-samsung.svg) no-repeat 16px 50%; }
 
 .apple {
-  background: url(./static/logo-apple.svg) no-repeat 16px 50%; }
+  background: #fff url(./static/logo-apple.svg) no-repeat 16px 50%; }
 
 .viewsonic {
-  background: url(./static/logo-viewsonic.svg) no-repeat 16px 50%; }
+  background: #fff url(./static/logo-viewsonic.svg) no-repeat 16px 50%; }
 
 .bosch {
-  background: url(./static/logo-bosch.svg) no-repeat 16px 50%; }
+  background: #fff url(./static/logo-bosch.svg) no-repeat 16px 50%; }
 
 .hp {
-  background: url(./static/logo-hp.svg) no-repeat 16px 50%; }
+  background: #fff url(./static/logo-hp.svg) no-repeat 16px 50%; }
 
 .acer {
-  background: url(./static/logo-acer.svg) no-repeat 16px 50%; }
+  background: #fff url(./static/logo-acer.svg) no-repeat 16px 50%; }
 
 .sony {
-  background: url(./static/logo-sony.svg) no-repeat 16px 50%; }
+  background: #fff url(./static/logo-sony.svg) no-repeat 16px 50%; }
 
 .swiper-pagination {
   position: relative;
@@ -1485,7 +1542,9 @@ button.swiper-pagination-bullet {
     background-color: #F8F8F8;
     outline: none;
     position: relative;
-    top: 0px; }
+    top: 0px;
+    font-weight: 500;
+    font-size: 16px; }
   .swiper__button > span {
     margin: 0 16px;
     color: #1B1C21; }
@@ -1500,6 +1559,8 @@ button.swiper-pagination-bullet {
 .swiper-container__technics {
   background-color: #F8F8F8;
   border-bottom: 1px solid #D9FFF5; }
+  .swiper-container__technics .swiper-title {
+    background: linear-gradient(270deg, #F8F8F8 0%, #fff 98.61%); }
   .swiper-container__technics .swiper-wrapper {
     height: 160px;
     margin-bottom: 16px; }
@@ -1525,7 +1586,10 @@ button.swiper-pagination-bullet {
 .swiper-container__pricesOfServices {
   background-color: #F8F8F8;
   border-bottom: 1px solid #D9FFF5;
-  height: auto; }
+  height: auto;
+  font-size: 14px; }
+  .swiper-container__pricesOfServices .swiper-title {
+    background: linear-gradient(270deg, #F8F8F8 0%, #fff 98.61%); }
   .swiper-container__pricesOfServices .swiper-wrapper {
     display: flex;
     height: 200px;
@@ -1558,7 +1622,10 @@ button.swiper-pagination-bullet {
     align-items: flex-start;
     flex-direction: column;
     height: 200px;
-    border: 0; }
+    border: 0;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px; }
     @media (min-width: 768px) {
       .swiper-container__pricesOfServices .swiper-slide {
         height: 64px;
@@ -1623,7 +1690,8 @@ button.swiper-pagination-bullet {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 16px; }
+    margin: 16px;
+    font-weight: 700; }
     .swiper-container__pricesOfServices .swiper-slide__goOrder button:hover {
       cursor: pointer;
       color: #FF3E79;
@@ -1650,7 +1718,8 @@ button.swiper-pagination-bullet {
 .ndsText {
   min-width: 288px;
   margin: 0 16px 0 16px;
-  font-size: 14px; }
+  font-size: 14px;
+  font-weight: 400; }
   @media (min-width: 768px) {
     .ndsText {
       margin: 24px 0 0 24px;
@@ -1689,6 +1758,7 @@ button.swiper-pagination-bullet {
   height: 129px;
   text-align: center;
   font-size: 14px;
+  line-height: 16px;
   color: #7E7E82; }
   @media (min-width: 768px) {
     .footer {
@@ -1700,14 +1770,22 @@ button.swiper-pagination-bullet {
   .footer span {
     display: block;
     margin: auto;
-    margin-top: 16px; }
+    margin-top: 16px;
+    margin-bottom: 19px;
+    padding: 0; }
   .footer .footer__development {
     width: 218px; }
+    @media (min-width: 768px) {
+      .footer .footer__development {
+        text-align: left; } }
   .footer .footer__politics {
     width: 214px; }
   .footer .footer__offer {
-    width: 312px;
-    margin-bottom: 19px; }
+    width: 213px; }
+    @media (min-width: 768px) {
+      .footer .footer__offer {
+        width: 330px;
+        text-align: right; } }
 
 
 /*# sourceMappingURL=style.css.map*/

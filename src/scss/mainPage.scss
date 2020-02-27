@@ -22,7 +22,7 @@ html {
     display: flex;
     flex-direction: column;
     width: 100%; 
-    border-left: 1px solid $BottomBorder;       
+    border-left: 1px solid $borderColor-lightBlue;       
         @media (min-width: 1366px) {
             // max-width: 1044px;            
             margin: auto;
@@ -123,10 +123,9 @@ html {
     background: url("../img/divider.svg");
     background-repeat: no-repeat;
         @media (min-width: 320px) {
-        flex: 1 1 auto;
-        justify-content: flex-start;
+        flex: 1 1 auto;        
         }
-        @media (min-width: 768px) {
+        @media (min-width: 550px) {
         flex: 0 1 auto;
         width: 2px;
         }        
@@ -154,6 +153,7 @@ html {
 .mainSection {
     background-color: $bgColor-smoke;
     position: relative;   
+    border-bottom: 1px solid $BottomBorder;
         .mainSection__header {
             @media (min-width: 1366px) {
                 display: flex;
@@ -239,7 +239,7 @@ html {
     overflow-y: hidden; 
     overflow: -moz-scrollbars-none; 
     -ms-overflow-style: none;
-        @media (min-width: 1120px) {
+        @media (min-width: 768px) {
             flex-wrap: wrap;
         }
 }
@@ -252,21 +252,21 @@ html {
     height: 40px;
     color: $text-gray;    
     background-color: $bgColor-smoke;
-    outline: none;
-    border: none;
+    border: 2px solid $bgColor-smoke;
+    outline: none;    
     font-size: 16px;  
+    font-weight: 500;    
         span {    
             white-space: nowrap;    
             margin: auto;
             padding: 0 16px;    
-        }  
-        
+        }          
         &:hover {
             background-color: $bgColor-white;
             border: 2px solid $borderColor-lightBlue;
             border-radius: 6px;   
             outline: none;
-            cursor: pointer;
+            cursor: pointer;           
         }    
 }
 
@@ -284,9 +284,22 @@ html {
         }
 }
 .article__text {
-    font-weight: 400;    
+    font-weight: 400; 
+    line-height: 20px;   
     max-width: 490px;
-    overflow: hidden;        
+    font-size: 14px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.text__wrap {
+    -webkit-column-width: 320px;
+    -moz-column-width: 320px;
+    column-width: 320px;
+    height: 100%;
+    p {
+        margin-top: 0;
+        padding-top: 0;
+    }
 }
 .article__text p:first-child {
     margin-bottom: 16px;
@@ -305,7 +318,8 @@ html {
     align-items: center;
     padding-left: 8px;  
     margin-top: 16px;  
-    border: 0;       
+    border: 0;  
+    font-weight: 500;     
     background-color: #F8F8F8;
     outline: none;  
     position: relative;  

@@ -9,14 +9,15 @@
             }
 }
 .swiper-title {
-    background: linear-gradient(270deg, $bgColor-smoke 0%, $bgColor-white 98.61%);    
+    background:linear-gradient(90deg, $bgColor-smoke 1.39%, $bgColor-white 100%);  
     text-transform: uppercase;
     color: $text-gray;
     width: 100%;    
     padding: 16px;
+    font-weight: 400;
 }
 .swiper-wrapper {    
-    padding: 0 16px;
+    padding: 16px 16px 0 16px;
     height: 72px;    
         @media (min-width: 768px) {            
             height: 176px;                
@@ -32,7 +33,7 @@
 
 .swiper-slide {    
     background-color: $bgColor-white;
-    border: 1px solid #EAEAEA;
+    border: 1px solid $bgColor-smoke;
     border-radius: 6px;
     display: flex;
     justify-content: space-between;
@@ -66,28 +67,28 @@
     }    
 }
 .lenovo {
-    background: url("../img/logo-lenovo.svg") no-repeat 16px 50%;
+    background: $bgColor-white url("../img/logo-lenovo.svg") no-repeat 16px 50%;
 }
 .samsung {
-    background: url("../img/logo-samsung.svg") no-repeat 16px 50%;
+    background: $bgColor-white url("../img/logo-samsung.svg") no-repeat 16px 50%;
 } 
 .apple {
-    background: url("../img/logo-apple.svg") no-repeat 16px 50%;
+    background: $bgColor-white url("../img/logo-apple.svg") no-repeat 16px 50%;
 } 
 .viewsonic {
-    background: url("../img/logo-viewsonic.svg") no-repeat 16px 50%;
+    background: $bgColor-white url("../img/logo-viewsonic.svg") no-repeat 16px 50%;
 } 
 .bosch {
-    background: url("../img/logo-bosch.svg") no-repeat 16px 50%;
+    background: $bgColor-white url("../img/logo-bosch.svg") no-repeat 16px 50%;
 } 
 .hp {
-    background: url("../img/logo-hp.svg") no-repeat 16px 50%;
+    background: $bgColor-white url("../img/logo-hp.svg") no-repeat 16px 50%;
 } 
 .acer {
-    background: url("../img/logo-acer.svg") no-repeat 16px 50%;
+    background: $bgColor-white url("../img/logo-acer.svg") no-repeat 16px 50%;
 } 
 .sony {
-    background: url("../img/logo-sony.svg") no-repeat 16px 50%;
+    background: $bgColor-white url("../img/logo-sony.svg") no-repeat 16px 50%;
 }  
 .swiper-pagination {  
     position: relative;
@@ -107,10 +108,12 @@
         align-items: center;    
         border: 0;
         margin-left: 32px;        
-        background-color: #F8F8F8;
+        background-color: $bgColor-smoke;
         outline: none;
         position: relative;
         top: 0px;
+        font-weight: 500;
+        font-size: 16px;
     }    
     .swiper__button>span {    
         margin: 0 16px;        
@@ -129,6 +132,9 @@
 .swiper-container__technics {
     background-color: $bgColor-smoke;
     border-bottom: 1px solid $BottomBorder;
+        .swiper-title {
+            background:linear-gradient(270deg, $bgColor-smoke 0%, $bgColor-white 98.61%);
+        }
         .swiper-wrapper {
             height: 160px;
             margin-bottom: 16px;

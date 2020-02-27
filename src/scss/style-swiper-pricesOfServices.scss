@@ -2,6 +2,10 @@
     background-color: $bgColor-smoke;   
     border-bottom: 1px solid $BottomBorder;
     height: auto;
+    font-size: 14px;
+    .swiper-title {
+        background: linear-gradient(270deg, $bgColor-smoke 0%, $bgColor-white 98.61%);
+    }
     .swiper-wrapper {
         display: flex;   
         height: 200px;  
@@ -40,7 +44,10 @@
         align-items: flex-start;
         flex-direction: column;
         height: 200px;   
-        border: 0;                                               
+        border: 0;  
+        font-weight: 400; 
+        line-height: 18px;  
+        letter-spacing: 0.2px;                                        
             @media (min-width: 768px) {       
                 height: 64px;                
                 display: table-row; 
@@ -124,7 +131,8 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            margin: 16px;            
+            margin: 16px;  
+            font-weight: 700;          
                 &:hover {                    
                     cursor: pointer;
                     color: $bgColor-pink;
@@ -158,6 +166,7 @@
     min-width: 288px;
     margin:0 16px 0 16px;
     font-size: 14px;
+    font-weight: 400;
     @media (min-width: 768px) {
         margin: 24px 0 0 24px;
         width: 421px;
@@ -170,7 +179,7 @@
         display: inline-flex;         
         border: 0;  
         padding: 0;             
-        background-color: #F8F8F8;
+        background-color: $bgColor-smoke;
         outline: none;        
         font-size: 16px;  
         font-weight: 500;
@@ -201,6 +210,7 @@
     height: 129px;    
     text-align: center;
     font-size: 14px;
+    line-height: 16px;
     color: $text-gray;
     @media (min-width: 768px) {
         display: flex;
@@ -213,16 +223,25 @@
             display: block;            
             margin: auto;
             margin-top: 16px;
+            margin-bottom: 19px;
+            padding: 0;
         }
         .footer__development {            
-            width: 218px;            
+            width: 218px; 
+            @media (min-width: 768px) {
+                text-align: left;        
+            }
         }
         .footer__politics {
             width: 214px;
             
         }
         .footer__offer {
-            width: 312px;            
-            margin-bottom: 19px;
+            width: 213px;            
+            
+            @media (min-width: 768px) {
+                width: 330px;
+                text-align: right;        
+            }
         }
 }

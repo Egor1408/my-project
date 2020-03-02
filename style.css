@@ -465,7 +465,7 @@ html {
     margin-right: 8px;
     text-align: right;
     font-weight: 500; }
-  .main-section__button .button-repair:hover .button-repair__text, .main-section__button .button-repair .button-search__text, .main-section__button .button-search:hover .button-repair__text, .main-section__button .button-search .button-search__text {
+  .main-section__button .button-repair:hover .button-repair__text, .main-section__button .button-repair:hover .button-search__text, .main-section__button .button-search:hover .button-repair__text, .main-section__button .button-search:hover .button-search__text {
     text-decoration: underline;
     cursor: pointer; }
   .main-section__button .button-repair:hover .button, .main-section__button .button-search:hover .button {

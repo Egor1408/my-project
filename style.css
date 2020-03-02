@@ -1627,11 +1627,11 @@ button.swiper-pagination-bullet {
       @media (min-width: 768px) {
         .swiper-container__pricesOfServices .swiper-slide .swiper-slide__go-order {
           position: relative; } }
-    .swiper-container__pricesOfServices .swiper-slide .swiper-slide__text, .swiper-container__pricesOfServices .swiper-slide .swiper-slide__go-order {
+    .swiper-container__pricesOfServices .swiper-slide .swiper-slide__text {
       margin-bottom: 5px;
       align-items: flex-start; }
       @media (min-width: 768px) {
-        .swiper-container__pricesOfServices .swiper-slide .swiper-slide__text, .swiper-container__pricesOfServices .swiper-slide .swiper-slide__go-order {
+        .swiper-container__pricesOfServices .swiper-slide .swiper-slide__text {
           display: table-cell;
           border-bottom: 1px solid  #eaeaea;
           vertical-align: middle; } }

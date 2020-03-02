@@ -159,7 +159,7 @@ html {
                 font-weight: 500;  
                      
             }  
-            &:hover .button-repair__text, .button-search__text {
+            &:hover .button-repair__text, &:hover .button-search__text {
                 text-decoration: underline;
                 cursor: pointer;
             }

@@ -73,7 +73,7 @@
                 position: relative;
             }
         }
-        .swiper-slide__text, .swiper-slide__go-order  {
+        .swiper-slide__text {
             margin-bottom: 5px;
             align-items: flex-start;
             @media (min-width: 768px) {       
@@ -97,37 +97,7 @@
         }
     }
 }
-    // .swiper-slide__services {
-    //     @media (min-width: 768px) {       
-    //         display: table-cell;            
-    //         border-bottom: 1px solid  #eaeaea; 
-    //         vertical-align: middle;                    
-    //     }               
-    // }
-    // .swiper-slide__price {
-    //     @media (min-width: 768px) {       
-    //         display: table-cell;
-    //         border-bottom: 1px solid #eaeaea;
-    //         vertical-align: middle;
-    //     }
-    // }
-    // .swiper-slide__term {
-    //     @media (min-width: 768px) {       
-    //         display: table-cell;
-    //         border-bottom: 1px solid #eaeaea;
-    //         vertical-align: middle;
-    //     }
-    // }
-
-    // .swiper-slide__go-order { 
-    //     @media (min-width: 768px) {       
-    //         display: table-cell;  
-    //         border-bottom: 1px solid #eaeaea;
-    //         vertical-align: middle;
-    //     }
-        
-          
-    // }
+    
 
 
 

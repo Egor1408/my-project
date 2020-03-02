@@ -52,8 +52,8 @@
             @media (min-width: 768px) {       
                 height: 64px;                
                 display: table-row; 
-                border-left: 32px solid white;
-                border-right: 32px solid white;                                                                                             
+                border-left: 32px solid $bgColor-white;
+                border-right: 32px solid $bgColor-white;                                                                                             
             }             
         .swiper-slide__legend {
             color:$text-gray;
@@ -78,7 +78,7 @@
             align-items: flex-start;
             @media (min-width: 768px) {       
                 display: table-cell;            
-                border-bottom: 1px solid  #eaeaea; 
+                border-bottom: 1px solid  $borderGray; 
                 vertical-align: middle;                    
             } 
         }        
@@ -127,7 +127,7 @@
         
         
             span {                    
-                color: #1B1C21;               
+                color: $text-black;               
                 background: url("../img/pink-arrow.svg") no-repeat 60% 90%;
                 width: 192px;
                 @media (min-width: 400px) {

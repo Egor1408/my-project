@@ -145,7 +145,7 @@ html {
         }
 }
 .main-section__button {
-    button {
+    .button-repair, .button-search  {
         margin-right: 32px;
         display: flex;
         align-items: center;
@@ -153,17 +153,18 @@ html {
         border: none;
         background-color: $bgColor-smoke;
         color:$text-black;
-            span { 
+            .button-repair__text, .button-search__text { 
                 margin-right: 8px;         
                 text-align: right; 
-                font-weight: 500;       
+                font-weight: 500;  
+                     
             }  
-            &:hover span {
+            &:hover .button-repair__text, .button-search__text {
                 text-decoration: underline;
                 cursor: pointer;
             }
-            &:hover div {
-                background-color: #ff1947;
+            &:hover .button {
+                background-color: $bdColor-red;
                 box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5);
                 cursor: pointer;
             }                
@@ -307,7 +308,7 @@ html {
 .article__button {
     span {    
         margin-left:16px;        
-        color: #1B1C21;    
+        color: $text-black;    
     }
 }
 .article__button {
@@ -324,6 +325,7 @@ html {
         min-width: 320px;
             @media (min-width: 320px) { 
                 max-width: 490px;
+                // margin: auto;
             }
             @media (min-width: 768px) {
                 max-width: 800px;

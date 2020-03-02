@@ -1,0 +1,201 @@
+.main-menu {
+    &.main-menu_open {
+        .main-menu__overlay{
+            opacity: 1;
+            z-index: 900;
+            background-color:rgba(255, 255, 255, 0.9);
+        }
+        .main-menu__wrapper {
+            transform: translateX(0px); 
+            box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2); 
+        }
+    }
+    &.main-menu_hiding {
+        .main-menu__overlay{
+            opacity: 1;
+            z-index: 900;
+            background-color:rgba(255, 255, 255, 0);
+        }
+        .main-menu__wrapper {
+            opacity: 1;
+            z-index: 900;
+            transform: translateX(-350px);
+        }      
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0);
+        transition: background 0.5s ease-in;
+        opacity: 0;
+        z-index: -1;    
+            @media (min-width: 1366px) {
+                position: relative;   
+                opacity: 1;
+                z-index: 100; 
+                width: 320px;     
+            }  
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        min-height: 676px;         
+        padding: 0 24px 0 24px;
+        transform: translateX(-415px);
+        z-index: 100; 
+        background-color: $bgColor-white;
+        transition-duration: 0.5s;
+        position: relative;    
+        border-left: 1px solid $borderColor-lightBlue;
+            @media (orientation: landscape) {
+                width: 320px;     
+            }
+            @media (min-width: 415px) {
+                width: 320px;
+            }
+            @media (min-width: 1366px) {
+                position: fixed;
+                transform: translateX(0);
+                box-shadow: none;       
+            }  
+    }
+
+    &__header {
+        height: 110px;   
+        display: flex;
+        align-items: center;    
+        justify-content: space-between;
+    }
+
+    &__close {
+        margin-right: 16px;
+        background-image: url('../img/button-closed.svg');
+            @media (min-width: 1366px) {
+                display: none;
+            }  
+    }
+
+    &__logo {
+        flex: 1;    
+        height: 52px;    
+        background-image: url("../img/CPS-logo.svg");
+        background-repeat: no-repeat;
+    }
+
+    &__search {
+        background-image: url('../img/button-search-main-menu.svg');
+    }
+
+    &__nav-list {
+        margin-top: 0;
+        padding: 0;
+
+        .nav-list__item {
+            list-style: none; 
+            padding-bottom: 20px; 
+            position: relative;
+            a { 
+                text-decoration: none;    
+                color: $text-black;
+            }
+            &:hover {
+                cursor: pointer;
+                text-shadow: 2px 2px 2px $bgColor-blue;            
+                &.active {
+                    text-shadow: none;
+                }
+            }
+            &.active a {
+                color: $text-gray;  
+            
+            } 
+            &.active::after {
+                content:"";    
+                background-color: $bgColor-blue;
+                border-radius: 0 6px 6px 0;
+                position: absolute;
+                width: 4px;
+                height: 32px;
+                left: -24px;
+                top: -4px;
+            }
+                @media (min-height: 750px) {
+                    padding-bottom: 28px;
+                }
+                @media (min-height: 850px) {
+                    padding-bottom: 32px;
+                }    
+        }
+    }
+
+    &__contacts {
+        position: absolute;
+        bottom: 32px;
+        a {
+            text-decoration: none;
+            color: $text-black;
+        }
+    }
+
+    &__button {
+        display: flex; 
+        .button {
+            margin: 0 16px 16px 0;
+        }
+    }
+
+    &__button-call {
+        background-image: url("../img/button-call.svg");
+    }
+
+    &__button-chat {
+        background-image: url("../img/button-chat.svg");
+    }
+
+    &__button-profile {
+        background-image: url("../img/button-profile.svg");
+    }
+
+    &__email {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__tel {
+        margin-top: 12px;
+        font-weight: bold;
+        &:hover {
+        text-decoration: underline; 
+        }
+    }
+
+    &__lang {
+        margin-top: 40px ;
+        button {   
+            border: 0;    
+            outline: none; 
+            background-color: $bgColor-white;
+            color: $text-black;
+            font-weight: 500;
+            padding: 0 7px 0 0;  
+            &.active {
+                color: $text-gray; 
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -16,7 +16,7 @@
             outline: none;
         }
         &:hover {    
-            background-color: #ff1947;
+            background-color: $bdColor-red;
             box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5);
             cursor: pointer;
         }

@@ -453,7 +453,7 @@ html {
       margin: 42px 0 8px 0;
       padding-left: 32px; } }
 
-.main-section__button button {
+.main-section__button .button-repair, .main-section__button .button-search {
   margin-right: 32px;
   display: flex;
   align-items: center;
@@ -461,14 +461,14 @@ html {
   border: none;
   background-color: #F8F8F8;
   color: #1B1C21; }
-  .main-section__button button span {
+  .main-section__button .button-repair .button-repair__text, .main-section__button .button-repair .button-search__text, .main-section__button .button-search .button-repair__text, .main-section__button .button-search .button-search__text {
     margin-right: 8px;
     text-align: right;
     font-weight: 500; }
-  .main-section__button button:hover span {
+  .main-section__button .button-repair:hover .button-repair__text, .main-section__button .button-repair .button-search__text, .main-section__button .button-search:hover .button-repair__text, .main-section__button .button-search .button-search__text {
     text-decoration: underline;
     cursor: pointer; }
-  .main-section__button button:hover div {
+  .main-section__button .button-repair:hover .button, .main-section__button .button-search:hover .button {
     background-color: #ff1947;
     box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5);
     cursor: pointer; }
@@ -683,6 +683,25 @@ html {
     cursor: pointer;
     background-image: url(./static/swiper-go-hover.svg); }
 
+.main-menu.main-menu_open .main-menu__overlay {
+  opacity: 1;
+  z-index: 900;
+  background-color: rgba(255, 255, 255, 0.9); }
+
+.main-menu.main-menu_open .main-menu__wrapper {
+  transform: translateX(0px);
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2); }
+
+.main-menu.main-menu_hiding .main-menu__overlay {
+  opacity: 1;
+  z-index: 900;
+  background-color: rgba(255, 255, 255, 0); }
+
+.main-menu.main-menu_hiding .main-menu__wrapper {
+  opacity: 1;
+  z-index: 900;
+  transform: translateX(-350px); }
+
 .main-menu__overlay {
   position: fixed;
   top: 0;
@@ -699,28 +718,6 @@ html {
       opacity: 1;
       z-index: 100;
       width: 320px; } }
-
-.main-menu.main-menu_open .main-menu__overlay {
-  opacity: 1;
-  z-index: 900;
-  background-color: rgba(255, 255, 255, 0.9); }
-
-.main-menu.main-menu_open .main-menu__wrapper {
-  transform: translateX(0px); }
-
-.main-menu.main-menu_hiding .main-menu__overlay {
-  opacity: 1;
-  z-index: 900;
-  background-color: rgba(255, 255, 255, 0); }
-
-.main-menu.main-menu_hiding .main-menu__wrapper {
-  opacity: 1;
-  z-index: 900;
-  transform: translateX(-350px); }
-
-.main-menu.main-menu_open .main-menu__wrapper {
-  transform: translateX(0px);
-  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2); }
 
 .main-menu__wrapper {
   width: 100%;
@@ -746,30 +743,47 @@ html {
       position: fixed;
       transform: translateX(0);
       box-shadow: none; } }
-  .main-menu__wrapper .nav-list {
-    margin-top: 0;
-    padding: 0; }
-  .main-menu__wrapper .nav-list__item {
+
+.main-menu__header {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.main-menu__close {
+  margin-right: 16px;
+  background-image: url(./static/button-closed.svg); }
+  @media (min-width: 1366px) {
+    .main-menu__close {
+      display: none; } }
+
+.main-menu__logo {
+  flex: 1;
+  height: 52px;
+  background-image: url(./static/CPS-logo.svg);
+  background-repeat: no-repeat; }
+
+.main-menu__search {
+  background-image: url(./static/button-search-main-menu.svg); }
+
+.main-menu__nav-list {
+  margin-top: 0;
+  padding: 0; }
+  .main-menu__nav-list .nav-list__item {
     list-style: none;
     padding-bottom: 20px;
     position: relative; }
-    @media (min-height: 750px) {
-      .main-menu__wrapper .nav-list__item {
-        padding-bottom: 28px; } }
-    @media (min-height: 850px) {
-      .main-menu__wrapper .nav-list__item {
-        padding-bottom: 32px; } }
-    .main-menu__wrapper .nav-list__item a {
+    .main-menu__nav-list .nav-list__item a {
       text-decoration: none;
       color: #1B1C21; }
-    .main-menu__wrapper .nav-list__item:hover {
+    .main-menu__nav-list .nav-list__item:hover {
       cursor: pointer;
       text-shadow: 2px 2px 2px #41F6D7; }
-      .main-menu__wrapper .nav-list__item:hover.active {
+      .main-menu__nav-list .nav-list__item:hover.active {
         text-shadow: none; }
-    .main-menu__wrapper .nav-list__item.active a {
+    .main-menu__nav-list .nav-list__item.active a {
       color: #7E7E82; }
-    .main-menu__wrapper .nav-list__item.active::after {
+    .main-menu__nav-list .nav-list__item.active::after {
       content: "";
       background-color: #41F6D7;
       border-radius: 0 6px 6px 0;
@@ -778,25 +792,12 @@ html {
       height: 32px;
       left: -24px;
       top: -4px; }
-
-.main-menu__header {
-  height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-  .main-menu__header .main-menu__close {
-    background-image: url(./static/button-closed.svg);
-    margin-right: 16px; }
-    @media (min-width: 1366px) {
-      .main-menu__header .main-menu__close {
-        display: none; } }
-  .main-menu__header .main-menu__logo {
-    flex: 1;
-    height: 52px;
-    background-image: url(./static/CPS-logo.svg);
-    background-repeat: no-repeat; }
-  .main-menu__header .main-menu__search {
-    background-image: url(./static/button-search-main-menu.svg); }
+    @media (min-height: 750px) {
+      .main-menu__nav-list .nav-list__item {
+        padding-bottom: 28px; } }
+    @media (min-height: 850px) {
+      .main-menu__nav-list .nav-list__item {
+        padding-bottom: 32px; } }
 
 .main-menu__contacts {
   position: absolute;
@@ -809,21 +810,24 @@ html {
   display: flex; }
   .main-menu__button .button {
     margin: 0 16px 16px 0; }
-  .main-menu__button .main-menu__button-call {
-    background-image: url(./static/button-call.svg); }
-  .main-menu__button .main-menu__button-chat {
-    background-image: url(./static/button-chat.svg); }
-  .main-menu__button .main-menu__button-profile {
-    background-image: url(./static/button-profile.svg); }
+
+.main-menu__button-call {
+  background-image: url(./static/button-call.svg); }
+
+.main-menu__button-chat {
+  background-image: url(./static/button-chat.svg); }
+
+.main-menu__button-profile {
+  background-image: url(./static/button-profile.svg); }
+
+.main-menu__email:hover {
+  text-decoration: underline; }
 
 .main-menu__tel {
   margin-top: 12px;
   font-weight: bold; }
   .main-menu__tel:hover {
     text-decoration: underline; }
-
-.main-menu__email:hover {
-  text-decoration: underline; }
 
 .main-menu__lang {
   margin-top: 40px; }
@@ -1609,8 +1613,8 @@ button.swiper-pagination-bullet {
       .swiper-container__pricesOfServices .swiper-slide {
         height: 64px;
         display: table-row;
-        border-left: 32px solid white;
-        border-right: 32px solid white; } }
+        border-left: 32px solid #fff;
+        border-right: 32px solid #fff; } }
     .swiper-container__pricesOfServices .swiper-slide .swiper-slide__legend {
       color: #7E7E82;
       line-height: 16px;
@@ -1633,7 +1637,7 @@ button.swiper-pagination-bullet {
       @media (min-width: 768px) {
         .swiper-container__pricesOfServices .swiper-slide .swiper-slide__text {
           display: table-cell;
-          border-bottom: 1px solid  #eaeaea;
+          border-bottom: 1px solid #eaeaea;
           vertical-align: middle; } }
     .swiper-container__pricesOfServices .swiper-slide .swiper-slide__text {
       margin-top: -15px;

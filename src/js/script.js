@@ -1,240 +1,167 @@
 // модалки
 //обратная связь
-var modalFeedback = document.querySelector('.modalWindow__feedback');
-var modalWindowFeedBack = modalFeedback.querySelector('.modalWindow');
-var openModalFeedback = document.querySelector('.buttonChat');
-openModalFeedback.addEventListener('click', function(evt){
-    evt.preventDefault();    
-    modalFeedback.classList.add('openFeedback');
+let modalFeedback = document.querySelector('.modal-window__feedback');
+let modalWindowFeedBack = modalFeedback.querySelector('.modal-window__wrapper');
+let openModalFeedback = document.querySelector('.button-chat');
+openModalFeedback.addEventListener('click', function(evt){     
+    modalFeedback.classList.add('modal-window__feedback_open');
 });
-var openModalFeedbackMM = document.querySelector('.mainMenu__buttonChat');
-openModalFeedbackMM.addEventListener('click', function(evt){
-    evt.preventDefault();    
-    modalFeedback.classList.add('openFeedback');
+let openModalFeedbackMM = document.querySelector('.main-menu__button-chat');
+openModalFeedbackMM.addEventListener('click', function(evt){  
+    modalFeedback.classList.add('modal-window__feedback_open');
 });
-var closeModalFeedback = document.querySelector('.modalWindow__closeFeedback');
+let closeModalFeedback = document.querySelector('.modal-window__close-feedback');
 closeModalFeedback.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    modalFeedback.classList.remove('openFeedback');
-    modalFeedback.classList.add('hidingFeedback');
-    setTimeout(() => modalFeedback.classList.remove('hidingFeedback'), 500);
+    modalFeedback.classList.remove('modal-window__feedback_open');
+    modalFeedback.classList.add('modal-window__feedback_hiding');
+    setTimeout(() => modalFeedback.classList.remove('modal-window__feedback_hiding'), 500);
 });
 document.addEventListener('keydown', function(evt) {    
     if(evt.keyCode === 27) {
-        modalFeedback.classList.remove('openFeedback');
-        modalFeedback.classList.add('hidingFeedback');
-        setTimeout(() => modalFeedback.classList.remove('hidingFeedback'), 500);       
+        modalFeedback.classList.remove('modal-window__feedback_open');
+        modalFeedback.classList.add('modal-window__feedback_hiding');
+        setTimeout(() => modalFeedback.classList.remove('modal-window__feedback_hiding'), 500);       
     };
 });
-var overlayFeedback = modalFeedback.querySelector('.modalWindow__overlay');
-window.addEventListener('click', function(evt) {   
-    evt.preventDefault(); 
-    if(modalFeedback.classList.contains('openFeedback')      
+window.addEventListener('click', function(evt) {    
+    if(modalFeedback.classList.contains('modal-window__feedback_open')      
     && !modalWindowFeedBack.contains(evt.target)
     && !openModalFeedbackMM.contains(evt.target)   
     && !openModalFeedback.contains(evt.target)) {   
-        modalFeedback.classList.remove('openFeedback');
-        modalFeedback.classList.add('hidingFeedback');
-        setTimeout(() => modalFeedback.classList.remove('hidingFeedback'), 500);        
+        modalFeedback.classList.remove('modal-window__feedback_open');
+        modalFeedback.classList.add('modal-window__feedback_hiding');
+        setTimeout(() => modalFeedback.classList.remove('modal-window__feedback_hiding'), 500);        
         
     } 
 });
 
 //заказать звонок
 
-var modalOrderCall = document.querySelector('.modalWindow__orderCall');
-var modalWindowOrderCall = modalOrderCall.querySelector('.modalWindow');
-var openModalOrderCall = document.querySelector('.buttonCall');
-openModalOrderCall.addEventListener('click', function(evt){
-    evt.preventDefault();    
-    modalOrderCall.classList.add('openOrderCall');
+let modalOrderCall = document.querySelector('.modal-window__orderCall');
+let modalWindowOrderCall = modalOrderCall.querySelector('.modal-window__wrapper');
+let openModalOrderCall = document.querySelector('.button-call');
+openModalOrderCall.addEventListener('click', function(evt){   
+    modalOrderCall.classList.add('modal-window__orderCall_open');
 });
-var openModalOrderCallMM = document.querySelector('.mainMenu__buttonCall');
-openModalOrderCallMM.addEventListener('click', function(evt){
-    evt.preventDefault();    
-    modalOrderCall.classList.add('openOrderCall');
+let openModalOrderCallMM = document.querySelector('.main-menu__button-call');
+openModalOrderCallMM.addEventListener('click', function(evt){   
+    modalOrderCall.classList.add('modal-window__orderCall_open');
 });
-var closeModalFeedback = document.querySelector('.modalWindow__closeOrderCall');
-closeModalFeedback.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    modalOrderCall.classList.remove('openOrderCall');
-    modalOrderCall.classList.add('hidingOrderCall');
-    setTimeout(() => modalOrderCall.classList.remove('hidingOrderCall'), 500);
+let closeModalOrderCall = document.querySelector('.modal-window__close-orderCall');
+closeModalOrderCall.addEventListener('click', function(evt) {
+    modalOrderCall.classList.remove('modal-window__orderCall_open');
+    modalOrderCall.classList.add('modal-window__orderCall_hiding');
+    setTimeout(() => modalOrderCall.classList.remove('modal-window__orderCall_hiding'), 500);
 });
 document.addEventListener('keydown', function(evt) {    
     if(evt.keyCode === 27) {
-        modalOrderCall.classList.remove('openOrderCall');
-        modalOrderCall.classList.add('hidingOrderCall');
-        setTimeout(() => modalOrderCall.classList.remove('hidingOrderCall'), 500);       
+        modalOrderCall.classList.remove('modal-window__orderCall_open');
+        modalOrderCall.classList.add('modal-window__orderCall_hiding');
+        setTimeout(() => modalOrderCall.classList.remove('modal-window__orderCall_hiding'), 500);       
     };
 });
-var overlayOrderCall = modalOrderCall.querySelector('.modalWindow__overlay');
 window.addEventListener('click', function(evt) {   
-    evt.preventDefault(); 
-    if(modalOrderCall.classList.contains('openOrderCall')      
+    if(modalOrderCall.classList.contains('modal-window__orderCall_open')      
         && !openModalOrderCall.contains(evt.target)
         && !openModalOrderCallMM.contains(evt.target)
         && !modalWindowOrderCall.contains(evt.target)) {  
-            modalOrderCall.classList.remove('openOrderCall');
-            modalOrderCall.classList.add('hidingOrderCall');
-            setTimeout(() => modalOrderCall.classList.remove('hidingOrderCall'), 500);        
+            modalOrderCall.classList.remove('modal-window__orderCall_open');
+            modalOrderCall.classList.add('modal-window__orderCall_hiding');
+            setTimeout(() => modalOrderCall.classList.remove('modal-window__orderCall_hiding'), 500);        
     }
 });
 
+
+//mainMenu
+
+let mainMenu = document.querySelector('.main-menu');
+let mainMenu__wrapper = mainMenu.querySelector('.main-menu__wrapper');
+let buttonMenu = document.querySelector('.button-menu');
+buttonMenu.addEventListener('click', function(evt){    
+    mainMenu.classList.add('main-menu_open');    
+});
+let closeMenu = mainMenu.querySelector('.main-menu__close');
+    closeMenu.addEventListener('click', function(evt) {
+    mainMenu.classList.remove('main-menu_open');
+    mainMenu.classList.add('main-menu_hiding');
+    setTimeout(() => mainMenu.classList.remove('main-menu_hiding'), 500);
+});
+document.addEventListener('keydown', function(evt) {    
+    if(evt.keyCode === 27) {
+        mainMenu.classList.remove('main-menu_open');
+        mainMenu.classList.add('main-menu_hiding');
+        setTimeout(() => mainMenu.classList.remove('main-menu_hiding'), 500);       
+    };
+});
+window.addEventListener('click', function(evt) {   
+    if(mainMenu.classList.contains('main-menu_open')        
+        && !mainMenu__wrapper.contains(evt.target) 
+        && !buttonMenu.contains(evt.target)
+        && !modalFeedback.contains(evt.target)
+        && !modalOrderCall.contains(evt.target)) 
+        {   
+            mainMenu.classList.remove('main-menu_open'); 
+            mainMenu.classList.add('main-menu_hiding');
+            setTimeout(() => mainMenu.classList.remove('main-menu_hiding'), 500);        
+        }
+});
 
 
 
 //навигация mainMenu
 
-var navItems = document.querySelectorAll('.nav-list__item');
-var itemClick = function(key) {
-    key.addEventListener('click', function(evt){
-        evt.preventDefault();
-        itemMenuActiveDel();                 
-        key.classList.add('active');          
-    });
+let navItems = document.querySelectorAll('.nav-list__item');
+let addClass = function(item) {
+    item.addEventListener('click', function(evt){
+        removeClass();                 
+        item.classList.add('active');          
+    })
 }
-var itemMenuActiveDel = function() {
-    for(var i=0; i<navItems.length; i++) {
-        var item = navItems[i];
+let removeClass = function() {
+    navItems.forEach(function(item) {
         if(item.classList.contains('active')){
             item.classList.remove('active');
         }
-    }
-};
-for(var i=0; i<navItems.length; i++) {
-    var item = navItems[i];
-    itemClick(item);         
-};
+    })
+}
+navItems.forEach(function(item) {
+    addClass(item);
+})
+
+
+
 
 //кнопки смены языка
 
-var langButtons = document.querySelectorAll('.lang button');
-var langButtonClick = function(key) {
+let langButtons = document.querySelectorAll('.main-menu__lang button');
+let langButtonClick = function(key) {
     key.addEventListener('click', function(evt){
-        evt.preventDefault();
         langButtonActiveDel();                 
         key.classList.add('active');          
     });
 }
-var langButtonActiveDel = function() {
-    for(var i=0; i<langButtons.length; i++) {
-        var button = langButtons[i];
+let langButtonActiveDel = function() {
+    for(let i=0; i<langButtons.length; i++) {
+        let button = langButtons[i];
         if(button.classList.contains('active')){
             button.classList.remove('active');
         }
     }
 };
-for(var i=0; i<langButtons.length; i++) {
-    var button = langButtons[i];
+for(let i=0; i<langButtons.length; i++) {
+    let button = langButtons[i];
     langButtonClick(button);         
 };
 
 
-//mainMenu
-
-var mainMenuWrapper = document.querySelector('.mainMenu__wrapper');
-var mainMenuOverlay = document.querySelector('.mainMenu__overlay');
-var mainMenu = document.querySelector('.mainMenu');
-var buttonMenu = document.querySelector('.buttonMenu');
-
-
-buttonMenu.addEventListener('click', function(evt){
-    evt.preventDefault();    
-    mainMenuWrapper.classList.add('mainMenu_open');
-    console.log("!!!");
-});
-var closeMenu = mainMenu.querySelector('.mainMenu__close');
-    closeMenu.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    mainMenuWrapper.classList.remove('mainMenu_open');
-    mainMenuWrapper.classList.add('hidingMainMenu');
-    setTimeout(() => mainMenuWrapper.classList.remove('hidingMainMenu'), 500);
-});
-document.addEventListener('keydown', function(evt) {    
-    if(evt.keyCode === 27) {
-        mainMenuWrapper.classList.remove('mainMenu_open');
-        mainMenuWrapper.classList.add('hidingMainMenu');
-        setTimeout(() => mainMenuWrapper.classList.remove('hidingMainMenu'), 500);       
-    };
-});
-var overlayMainMenu = modalOrderCall.querySelector('.mainMenu__overlay');
-window.addEventListener('click', function(evt) {   
-    evt.preventDefault(); 
-    if(mainMenuWrapper.classList.contains('mainMenu_open')        
-        && !mainMenu.contains(evt.target) 
-        && !buttonMenu.contains(evt.target)
-        && !modalFeedback.contains(evt.target)
-        && !modalOrderCall.contains(evt.target)) 
-        {   
-            mainMenuWrapper.classList.remove('mainMenu_open'); 
-            mainMenuWrapper.classList.add('hidingMainMenu');
-            setTimeout(() => mainMenuWrapper.classList.remove('hidingMainMenu'), 500);        
-        }
-});
-
-
-
-
-// document.addEventListener('keydown', function(evt) {    
-//     if(evt.keyCode === 27) {
-//         mainMenu.classList.remove('mainMenu_open');       
-//     };
-// });
-// window.addEventListener('click', function(evt) {   
-//     evt.preventDefault(); 
-//     if(mainMenu.classList.contains('mainMenu_open') 
-//     && !mainMenu.contains(evt.target) 
-//     && !buttonMenu.contains(evt.target)
-//     && !modalFeedback.contains(evt.target)
-//     && !modalOrderCall.contains(evt.target)) {   
-//         mainMenu.classList.remove('mainMenu_open');        
-//     }
-// });
-
-
-
-
-
-// var mainMenu = document.querySelector('.mainMenu');
-// var buttonMenu = document.querySelector('.buttonMenu');
-// buttonMenu.addEventListener('click', function(evt){
-//     evt.preventDefault();
-//     mainMenu.classList.add('mainMenu_open');
-// });
-// var closeMenu = mainMenu.querySelector('.mainMenu__close');
-// closeMenu.addEventListener('click', function(evt) {
-//     evt.preventDefault();
-//     mainMenu.classList.remove('mainMenu_open');
-// });
-// document.addEventListener('keydown', function(evt) {    
-//     if(evt.keyCode === 27) {
-//         mainMenu.classList.remove('mainMenu_open');       
-//     };
-// });
-// window.addEventListener('click', function(evt) {   
-//     evt.preventDefault(); 
-//     if(mainMenu.classList.contains('mainMenu_open') 
-//     && !mainMenu.contains(evt.target) 
-//     && !buttonMenu.contains(evt.target)
-//     && !modalFeedback.contains(evt.target)
-//     && !modalOrderCall.contains(evt.target)) {   
-//         mainMenu.classList.remove('mainMenu_open');        
-//     }
-// });
-
-
-
-
 //кнопки - показать всё
 //бренды
-var openSwiperBrands = document.querySelector('.button__brands');
-var brands = document.querySelector('.swiper-container__brands');
-var swiperBrands = brands.querySelector('.swiper-wrapper');
-var swiperTextBrands = openSwiperBrands.querySelector('span');
-var swiperImgBrands = openSwiperBrands.querySelector('div');
+let openSwiperBrands = document.querySelector('.button__brands');
+let brands = document.querySelector('.swiper-container__brands');
+let swiperBrands = brands.querySelector('.swiper-wrapper');
+let swiperTextBrands = openSwiperBrands.querySelector('span');
+let swiperImgBrands = openSwiperBrands.querySelector('div');
 openSwiperBrands.addEventListener('click', function(evt){
-    evt.preventDefault();
     if(swiperBrands.classList.contains('open')){
         swiperBrands.classList.remove('open');
         swiperTextBrands.textContent = "Показать все";
@@ -248,13 +175,12 @@ openSwiperBrands.addEventListener('click', function(evt){
 
 //виды техники
 
-var openSwiperTechniks = document.querySelector('.button__technics');
-var techniks = document.querySelector('.swiper-container__technics');
-var wrapperTechniks = techniks.querySelector('.swiper-wrapper');
-var swiperTextTechniks = openSwiperTechniks.querySelector('span');
-var swiperImgTechniks = openSwiperTechniks.querySelector('div');
+let openSwiperTechniks = document.querySelector('.button__technics');
+let techniks = document.querySelector('.swiper-container__technics');
+let wrapperTechniks = techniks.querySelector('.swiper-wrapper');
+let swiperTextTechniks = openSwiperTechniks.querySelector('span');
+let swiperImgTechniks = openSwiperTechniks.querySelector('div');
 openSwiperTechniks.addEventListener('click', function(evt){
-    evt.preventDefault();
     if(wrapperTechniks.classList.contains('open')){
         wrapperTechniks.classList.remove('open');
         swiperTextTechniks.textContent = "Показать все";
@@ -267,12 +193,11 @@ openSwiperTechniks.addEventListener('click', function(evt){
 });
 
 //читать далее 
-var articleButton = document.querySelector('.article__button');
-var articleText = document.querySelector('.article__text');
-var articleButtonText = articleButton.querySelector('span'); 
-var articleButtonImg = articleButton.querySelector('div');
+let articleButton = document.querySelector('.article__button');
+let articleText = document.querySelector('.article__text');
+let articleButtonText = articleButton.querySelector('span'); 
+let articleButtonImg = articleButton.querySelector('div');
 articleButton.addEventListener('click', function(evt){
-    evt.preventDefault();
     if(articleText.classList.contains('closed')) {
         articleText.classList.remove('closed');    
         articleText.classList.add('open');
@@ -292,14 +217,14 @@ articleButton.addEventListener('click', function(evt){
 
 import Swiper from '../js/swiper.min.js'
 if (document.body.clientWidth < 768) {
-    var mySwiper_technics = new Swiper('.swiper-container__technics', {
+    let mySwiper_technics = new Swiper('.swiper-container__technics', {
         width:240,
         spaceBetween:16,
         pagination: {
             el: '.swiper-pagination'
         }         
     });
-    var mySwiper__brands = new Swiper('.swiper-container__brands', {
+    let mySwiper__brands = new Swiper('.swiper-container__brands', {
         width:240,
         height:160,
         spaceBetween:16,
@@ -307,7 +232,7 @@ if (document.body.clientWidth < 768) {
             el: '.swiper-pagination'
         }         
     });
-    var mySwiper__pricesOfService = new Swiper('.swiper-container__pricesOfServices', {
+    let mySwiper__pricesOfService = new Swiper('.swiper-container__pricesOfServices', {
         width:260,
         height:200,
         spaceBetween:16,

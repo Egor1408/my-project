@@ -1,0 +1,78 @@
+.button { 
+    width: 40px;
+    height: 40px;      
+    border-radius: 20px;
+    border: 0px;
+    background-color: $bgColor-pink; 
+    background-repeat: no-repeat;
+    background-position: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.3s;
+        &:focus {
+            border: 0;
+            outline: none;
+        }
+        &:hover {    
+            background-color: #ff1947;
+            box-shadow: 0 0 0 5px rgba(255, 62, 121, 0.5);
+            cursor: pointer;
+        }
+  }
+  
+  
+  .long-button{       
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 119px;
+    height: 32px;
+    border-radius: 16px;
+    border: none;
+    outline: none;    
+    text-transform: uppercase;
+    color: $bgColor-white;
+    background-color: $bgColor-pink;  
+    float: right;
+    margin: 16px;  
+    font-weight: 700;          
+        &:hover {                    
+            cursor: pointer;
+            color: $bgColor-pink;
+            background-color: $bgColor-white;
+            border: 1px solid $bgColor-pink
+        }
+        &:hover &__arrow{
+            background-image: url('../img/go-order-hover.svg'); 
+        }
+        &__text {
+            font-size: 12px;
+            line-height: 24px;              
+            letter-spacing: -0.15px;
+        }                
+        &__arrow{  
+            height: 24px;
+            width: 24px;                     
+            background-image: url('../img/go-order.svg'); 
+            transform: translateX(5px);
+        } 
+  }
+
+  .swiper-slide__button {
+    width: 40px;
+    height: 40px;      
+    border-radius: 20px;
+    border: 0px;      
+    display: flex;
+    position: relative;
+    left: 148px; 
+    background-image: url('../img/swiper-go.svg');   
+    outline: none;
+    
+    &:hover {
+        cursor: pointer;        
+        background-image: url('../img/swiper-go-hover.svg');        
+    }    
+}

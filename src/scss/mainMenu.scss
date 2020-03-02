@@ -1,10 +1,10 @@
-.mainMenu__overlay {    
+.main-menu__overlay {    
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0);
     transition: background 0.5s ease-in;
     opacity: 0;
     z-index: -1;    
@@ -13,25 +13,26 @@
         opacity: 1;
         z-index: 100; 
         width: 320px;     
-    }  
+    }    
 }
-.mainMenu__wrapper {     
-    &.mainMenu_open {
-        .mainMenu__overlay{
+.main-menu{     
+    &.main-menu_open {
+        .main-menu__overlay{
             opacity: 1;
             z-index: 900;
+            background-color:rgba(255, 255, 255, 0.9);
         }
-        .mainMenu {
+        .main-menu__wrapper {
             transform: translateX(0px); 
         }
     }
-    &.hidingMainMenu {
-        .mainMenu__overlay{
+    &.main-menu_hiding {
+        .main-menu__overlay{
             opacity: 1;
             z-index: 900;
             background-color:rgba(255, 255, 255, 0);
         }
-        .mainMenu {
+        .main-menu__wrapper {
             opacity: 1;
             z-index: 900;
             transform: translateX(-350px);
@@ -39,15 +40,15 @@
             
     }
 }
-.mainMenu__wrapper {
-    &.mainMenu_open {
-        .mainMenu {
+.main-menu {
+    &.main-menu_open {
+        .main-menu__wrapper {
         transform: translateX(0px);
         box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);  
         } 
     }
 }
-.mainMenu {
+.main-menu__wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -58,17 +59,16 @@
     z-index: 100; 
     background-color: $bgColor-white;
     transition-duration: 0.5s;
-    position: fixed;
+    position: relative;    
     border-left: 1px solid $borderColor-lightBlue;
     @media (orientation: landscape) {
-        width: 320px;
+        width: 320px;     
     }
     @media (min-width: 415px) {
         width: 320px;
     }
-    
     @media (min-width: 1366px) {
-        position: relative;
+        position: fixed;
         transform: translateX(0);
         box-shadow: none;       
     }    
@@ -91,8 +91,8 @@
             color: $text-black;
         }
         &:hover {
-            // text-decoration: underline;
-            text-shadow: 2px 2px 2px $bgColor-blue;
+            cursor: pointer;
+            text-shadow: 2px 2px 2px $bgColor-blue;            
             &.active {
                 text-shadow: none;
             }
@@ -113,30 +113,30 @@
         }
     }    
 }
-.mainMenu__header {
+.main-menu__header {
     height: 110px;   
     display: flex;
     align-items: center;    
     justify-content: space-between;  
-    .mainMenu__close  {
+    .main-menu__close  {
         background-image: url('../img/button-closed.svg');
         @media (min-width: 1366px) {
             display: none;
         }
         margin-right: 16px;
     }  
-    .logo {
+    .main-menu__logo {
         flex: 1;    
         height: 52px;    
-        background-image: url("../img/logo.svg");
+        background-image: url("../img/CPS-logo.svg");
         background-repeat: no-repeat;
     
     }
-    .mainMenu__search {
+    .main-menu__search {
         background-image: url('../img/button-search-main-menu.svg');
     }
 }
-.contacts {
+.main-menu__contacts {
     position: absolute;
     bottom: 32px;
     a {
@@ -144,34 +144,35 @@
         color: $text-black;
     }
 }
-.contacts__button {
+.main-menu__button {
     display: flex; 
-    .mainMenu__buttonCall {
-        background-image: url("../img/button-call.svg");
-    }  
-    .mainMenu__buttonChat {
-        background-image: url("../img/button-chat.svg");
+    .button {
+        margin: 0 16px 16px 0;
     }
-    .mainMenu__buttonProfile {
+    .main-menu__button-call {
+            background-image: url("../img/button-call.svg");
+    }  
+    .main-menu__button-chat {
+            background-image: url("../img/button-chat.svg");
+    }
+    .main-menu__button-profile {
         background-image: url("../img/button-profile.svg");
     }
 }
-.contacts__button button {
-    margin: 0 16px 16px 0;
-}
-.contacts__tel {
+
+.main-menu__tel {
     margin-top: 12px;
     font-weight: bold;
     &:hover {
        text-decoration: underline; 
     }
 }
-.contacts__email {
+.main-menu__email {
     &:hover {
         text-decoration: underline;
     }
 }
-.lang {
+.main-menu__lang {
     margin-top: 40px ;
         button {   
             border: 0;    

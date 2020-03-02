@@ -1,130 +1,88 @@
-.modalWindow__overlay, .modalWindow {
-    opacity: 0;
-    z-index: -1;
-}
-
-.modalWindow__feedback {
-    &.openFeedback {
-        .modalWindow__overlay {
-            opacity: 1;
-            z-index: 1000;
-            background-color:rgba(255, 255, 255, 0.9);
-        }
-        .modalWindow {
-            opacity: 1;
-            z-index: 1000;
-            transform: translateX(0px);
-        }
+.modal-window {    
+    &__overlay, &__wrapper {
+        opacity: 0;
+        z-index: -1;
     }
-    &.hidingFeedback {
-        .modalWindow__overlay {
-            opacity: 1;
-            z-index: 1000;
-            background-color:rgba(255, 255, 255, 0);
+
+    &__feedback, &__orderCall {
+        &.modal-window__feedback_open, &.modal-window__orderCall_open {
+            .modal-window__overlay {
+                opacity: 1;
+                z-index: 1000;
+                background-color:rgba(255, 255, 255, 0.9);
+            }
+            .modal-window__wrapper {
+                opacity: 1;
+                z-index: 1000;
+                transform: translateX(0px);
+            }
         }
-        .modalWindow{
-            opacity: 1;
-            z-index: 1000;
-            transform: translateX(320px);
-            @media (min-width: 768px) {
-                transform: translateX(500px);
+        &.modal-window__feedback_hiding, &.modal-window__orderCall_hiding {
+            .modal-window__overlay {
+                opacity: 1;
+                z-index: 1000;
+                background-color:rgba(255, 255, 255, 0);
+            }
+            .modal-window__wrapper{
+                opacity: 1;
+                z-index: 1000;
+                transform: translateX(500px);                
             }
         }
     }
-}
-.modalWindow__orderCall {
-    &.openOrderCall {
-        .modalWindow__overlay {
-            opacity: 1;
-            z-index: 1000;
-            background-color:rgba(255, 255, 255, 0.9);
-        }
-        .modalWindow {
-            opacity: 1;
-            z-index: 1000;
-            transform: translateX(0px);
-        }
-    }
-    &.hidingOrderCall {
-        .modalWindow__overlay {
-            opacity: 1;
-            z-index: 1000;
-            background-color:rgba(255, 255, 255, 0);
-        }
-        .modalWindow{
-            opacity: 1;
-            z-index: 1000;
-            transform: translateX(320px);
-            @media (min-width: 768px) {
-                transform: translateX(500px);
-            }
-        }
-    }
-}
-.modalWindow__overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0);
-    transition: background 0.5s ease-in;
-}
-.modalWindow {       
-    width: 320px;           
-    height: 100%;   
-    background-color: #fff; 
-    margin: 0 auto;   
-    float: right;
-    padding-left: 16px;
-    transform: translateX(320px);
-    transition: transform .5s ease-in;
-    border-left: 1px solid $BottomBorder;
-    @media (min-width: 768px) {
-        width: 440px;
-        padding-left: 32px;
-        transform: translateX(500px);
-    }
-}
-.modalWindow__closeFeedback, .modalWindow__closeOrderCall {
-    @media (min-width: 768px) {       
-        position: absolute; 
-        margin-top: 32px;
-        transform: translateX(-88px)                            
-    }
-    background-image: url("../img/button-closed.svg");
-    margin-top: 24px;
-}
-.modalWindow__header {
-    padding: 5px 0;
-    margin: 40px 0 24px 0;
-}
-.modalWindow__title {
-    font-size: 24px;
-    position: relative;
-    font-weight: 700;
-    letter-spacing: -0.6px;
-}
-.modalWindow__title::after {
-    content:"";   
-    background-color: $bgColor-blue;
-    border-radius: 0 6px 6px 0;
-    position: absolute;
-    width: 4px;
-    height: 40px;
-    left: -16px;
-    top: -6px;
-    @media (min-width: 768px) {
-        left: -32px;
-    }
-}
-.modalWindow__form {
-    width: 288px;
-    @media (min-width: 768px) {
-        width: 376px;
+    
+    &__overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0);
+        transition: background 0.5s ease-in;
     }
 
-    .modalWindow__input {
+    &__wrapper {
+        width: 100%;           
+        height: 100%;   
+        background-color: #fff; 
+        margin: 0 auto;   
+        float: right;  
+        padding: 0 5% 0 5%;      
+        transform: translateX(320px);
+        transition: transform .5s ease-in;
+        border-left: 1px solid $BottomBorder;
+        @media (min-width: 440px) {
+            width: 440px;
+            padding: 0 32px 0 32px;
+        }        
+    }
+
+    &__close-feedback, &__close-orderCall  {
+        background-image: url("../img/button-closed.svg");
+        margin-top: 24px;
+        @media (min-width: 768px) {       
+            position: absolute; 
+            margin-top: 32px;
+            transform: translateX(-88px)                            
+        }
+    }
+
+    &__header {
+        margin: 40px 0 24px 0;
+    }
+
+    &__title {
+        font-size: 24px;
+        padding: 0;
+        position: relative;
+        font-weight: 700;
+        letter-spacing: -0.6px;
+    }
+    &__form {
+        width: 100%;
+    }
+
+    &__input {
         height: 48px;
         width: 100%;
         border-radius: 8px;
@@ -134,7 +92,7 @@
         border: 1px solid $borderGray;
     }
 
-    .modalWindow__textarea {
+    &__textarea {
         width: 100%;
         height: 118px;
         margin-bottom: 19px;
@@ -143,40 +101,25 @@
         resize: none;
         border: 1px solid $borderGray;
         padding: 12px 0 0 16px;
+    }   
+}
+.modal-window__wrapper::after {
+    content:"";   
+    background-color: $bgColor-blue;
+    border-radius: 0 6px 6px 0;
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    left: 0;
+    top: 96px;
+    @media (min-width: 768px) {
+        top: 32px;
     }
-    .modalWindow__agreement {        
-        .pinkText {
-            color: $bgColor-pink;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-    .modalWindow_toSend {         
-        display: flex;
-        justify-content: space-around;
-        width: 136px;
-        height: 32px;
-        border-radius: 16px;
-        border: none;
-        outline: none;
-        font-size: 12px;  
-        font-weight: 700;          
-        line-height: 24px;
-        text-align: right;
-        letter-spacing: -0.15px;
-        text-transform: uppercase;
-        color: $bgColor-white;
-        background-color: $bgColor-pink;            
-        margin: 19px 0 0 152px;            
-        @media (min-width: 768px) {
-            margin: 23px 0 0 240px;
-        }            
-            div{  
-                height: 24px;
-                width: 24px;                      
-                background-image: url('../img/goOrder.svg'); 
-            }
+}
+.pinkText {
+    color: $bgColor-pink;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
     }
 }

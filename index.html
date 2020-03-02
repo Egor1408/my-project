@@ -7,60 +7,67 @@
     <title>my-project</title>
 </head>
 <body>     
-    <div class="modalWindow__feedback">
-        <div class="modalWindow__overlay">
-            <div class="modalWindow">
-                <button class="modalWindow__closeFeedback button"></button>
-                <div class="modalWindow__header">                
-                    <span class="modalWindow__title">Обратная связь</span>                
+    <div class="modal-window modal-window__feedback">
+        <div class="modal-window__overlay">
+            <div class="modal-window__wrapper">
+                <button class="modal-window__close-feedback button"></button>
+                <div class="modal-window__header">                
+                    <span class="modal-window__title">Обратная связь</span>                
                 </div>
-                <div class="modalWindow__body">
-                    <form class="modalWindow__form"action="#" method="post" >
-                        <input class="modalWindow__input" type="text" name="name" placeholder="Имя">
-                        <input class="modalWindow__input" type="tel" name="telephone" placeholder="Телефон">
-                        <input class="modalWindow__input" type="email" name="email" placeholder="Электронная почта">
-                        <textarea class="modalWindow__textarea" name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
-                        <p class="modalWindow__agreement">Нажимая "отправить", вы даёте согласие на 
+                <div class="modal-window__body">
+                    <form class="modal-window__form"action="#" method="post" >
+                        <input class="modal-window__input" type="text" name="name" placeholder="Имя">
+                        <input class="modal-window__input" type="tel" name="telephone" placeholder="Телефон">
+                        <input class="modal-window__input" type="email" name="email" placeholder="Электронная почта">
+                        <textarea class="modal-window__textarea" name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                        <p class="modal-window__agreement">Нажимая "отправить", вы даёте согласие на 
                             <a href="#" class="pinkText">обработку персональных данных</a> и соглашаетесь с нашей
                             <a href="#" class="pinkText">политикой конфиденциальности</a>
-                        </p>
-                        <button class="modalWindow_toSend">отправить<div></div></button>
+                        </p>                        
+                        <button class="modal-window_to-send long-button">
+                            <span class="long-button__text">отправить</span>
+                            <div class="long-button__arrow"></div>
+                        </button>
+                                               
                     </form>
                 </div>            
             </div>
         </div>
     </div>
-    <div class="modalWindow__orderCall">
-        <div class="modalWindow__overlay">
-            <div class="modalWindow">
-                <button class="modalWindow__closeOrderCall button"></button>
-                <div class="modalWindow__header">                
-                    <span class="modalWindow__title">Заказать звонок</span>                
+    <div class="modal-window modal-window__orderCall">
+        <div class="modal-window__overlay">
+            <div class="modal-window__wrapper">
+                <button class="modal-window__close-orderCall button"></button>
+                <div class="modal-window__header">                
+                    <span class="modal-window__title">Заказать звонок</span>                
                 </div>
-                <div class="modalWindow__body">
-                    <form class="modalWindow__form"action="#" method="post" >                        
-                        <input class="modalWindow__input" type="tel" name="telephone" placeholder="Телефон">
-                        <p class="modalWindow__agreement">Нажимая "отправить", вы даёте согласие на 
+                <div class="modal-window__body">
+                    <form class="modal-window__form"action="#" method="post" >                        
+                        <input class="modal-window__input" type="tel" name="telephone" placeholder="Телефон">
+                        <p class="modal-window__agreement">Нажимая "отправить", вы даёте согласие на 
                             <a href="#" class="pinkText">обработку персональных данных</a> и соглашаетесь с нашей
                             <a href="#" class="pinkText">политикой конфиденциальности</a>
                         </p>
-                        <button class="modalWindow_toSend">отправить<div></div></button>
+                        <button class="modal-window_to-send long-button">
+                            <span class="long-button__text">отправить</span>
+                            <div class="long-button__arrow"></div>
+                        </button>                       
                     </form>
                 </div>            
             </div>
         </div>
     </div>
 <div class="wrap">
-    <div class="mainMenu__wrapper">
-        <div class="mainMenu__overlay">
-            <div class="mainMenu">
-                <div class="mainMenu__header">
-                    <button class="mainMenu__close button"></button>                
-                    <div class="logo"></div>
-                    <button class="mainMenu__search button"></button>     
+    <div class="main-menu">
+        <div class="main-menu__overlay">
+            <div class="main-menu__wrapper">
+                <div class="main-menu__header">
+                    <button class="main-menu__close button"></button>                
+                    <div class="main-menu__logo"></div>
+                    <button class="main-menu__search button"></button>     
                 </div>
                 <nav>           
-                    <ul class="nav-list">
+                    <ul class="main-menu__nav-list nav-list">
                         <li class="nav-list__item"><a href="#">Ремонт техники</a></li>
                         <li class="nav-list__item active"><a href="#">Услуги и сервисы</a></li>
                         <li class="nav-list__item"><a href="#">Корпоративным клиентам</a></li>
@@ -71,19 +78,19 @@
                         <li class="nav-list__item"><a href="#">Контакты</a></li>
                     </ul>          
                 </nav>
-                <div class="contacts">
-                    <div class="contacts__button">
-                        <button class="mainMenu__buttonCall button"></button>
-                        <button class="mainMenu__buttonChat button"></button>
-                        <button class="mainMenu__buttonProfile button"></button>
+                <div class="main-menu__contacts">
+                    <div class="main-menu__button">
+                        <button class="main-menu__button-call button"></button>
+                        <button class="main-menu__button-chat button"></button>
+                        <button class="main-menu__button-profile button"></button>
                     </div>
-                    <div class="contacts__email">
+                    <div class="main-menu__email">
                         <a href="mailto:mail@cps.com">mail@cps.com</a>
                     </div>
-                    <div class="contacts__tel">
+                    <div class="main-menu__tel">
                         <a href="tel:88008908900">8 800 890 8900</a>                        
                     </div>
-                    <div class="lang">
+                    <div class="main-menu__lang">
                         <button class="active">RU</button>
                         <button>EN</button>
                         <button>CH</buttonclass="active">
@@ -92,48 +99,48 @@
             </div>  
         </div>  
     </div>      
-    <div class="mainContent">                
-        <header>
-            <div class="header__leftCol">                
-                <button class="buttonMenu button"></button>                   
+    <div class="main-content">                
+        <header class="header">
+            <div class="header__left-col">                
+                <button class="button-menu button"></button>                   
                 <div class="header__divider"></div>                        
                 <div class="header__logo"></div>
             </div>
             
-            <div class="header__middleCol">
-                <button class="buttonCall button"></button>
-                <button class="buttonChat button"></button>
-                <button class="buttonProfile button"></button>
+            <div class="header__middle-col">
+                <button class="button-call button"></button>
+                <button class="button-chat button"></button>
+                <button class="button-profile button"></button>
             </div>
             <div class="header__divider"></div>
-            <div class="header__rightCol">                
-                    <button class="buttonRepair button"></button>                
-                    <button class="buttonSearch button"></button>                
+            <div class="header__right-col">                
+                    <button class="button-repair button"></button>                
+                    <button class="button-search button"></button>                
             </div>
         </header>
-        <section class="mainSection">
-            <div class="mainSection__header">                
-                <h1 class="mainSection__title">Услуги и сервисы</h1>
-                <div class="mainSection__button">                    
-                    <button class="buttonRepair">
+        <section class="main-section">
+            <div class="main-section__header">                
+                <h1 class="main-section__title">Услуги и сервисы</h1>
+                <div class="main-section__button">                    
+                    <button class="button-repair">
                         <span>Оставить заявку</span>
                         <div class="button"></div>
                     </button>
-                    <button class="buttonSearch">
+                    <button class="button-search">
                         <span>Статус ремонта</span>
                         <div class="button"></div>
                     </button>                    
                 </div>    
             </div>
-            <nav class="mainSection__nav">     
-                <button class="mainSection__item" onclick="window.location.href='#brands'"><span>Ремонтируемые бренды</span></button>  
-                <button class="mainSection__item" onclick="window.location.href='#technics'"><span>Ремонтируемые устройства</span></button>
-                <button class="mainSection__item" onclick="window.location.href='#prices'"><span>Цены на услуги</span></button>
-                <button class="mainSection__item"><span>Адреса сервисных центров</span></button>
-                <button class="mainSection__item"><span>Специальные цены</span></button>
-                <button class="mainSection__item"><span>Отзывы</span></button>
+            <nav class="main-section__nav">     
+                <a href="#brands" class="main-section__item">Ремонтируемые бренды</a>
+                <a href="#technics" class="main-section__item">Ремонтируемые устройства</a>
+                <a href="#prices" class="main-section__item">Цены на услуги</a>
+                <a href="#" class="main-section__item">Адреса сервисных центров</a>
+                <a href="#" class="main-section__item">Специальные цены</a>
+                <a href="#" class="main-section__item">Отзывы</a>
             </nav>   
-            <div class="mainSection__article">  
+            <div class="main-section__article">  
                 <div class="article">
                     <div class="article__text closed">
                         <div class="text__wrap">                        
@@ -155,7 +162,7 @@
                         <span>Читать далее</span>
                     </button> 
                 </div>             
-                <div class="mainSection__picture">
+                <div class="main-section__picture">
                     <img src="img/picture.png" alt="picture">
                 </div>
             </div>
@@ -257,56 +264,75 @@
                 <span>цены на услуги</span>
             </div>
             <div class="swiper-wrapper">
-                <div class="hint768">
+                <div class="mobile-legend">
                     <span class="services">Ремонтные услуги</span>
                     <span class="price">Цена</span>
                     <span class="term">Срок</span>      
                 </div>                
                 <div class="swiper-slide">
-                    <span class="swiper-slide__hint swiper-slide__servicesHint">Ремонтные услуги</span>
-                    <span class="swiper-slide__services">Диагностика</span>
-                    <span class="swiper-slide__hint swiper-slide__priceHint">Цена</span>
-                    <span class="swiper-slide__price">Бесплатно</span>
-                    <span class="swiper-slide__hint swiper-slide__termHint">Срок</span>
-                    <span class="swiper-slide__term">30 мин</span>                                      
-                    <div class="swiper-slide__goOrder"><button><span>заказать</span><div></div></button></div>
+                    <span class="swiper-slide__legend swiper-slide__servicesHint">Ремонтные услуги</span>
+                    <span class="swiper-slide__text swiper-slide__services">Диагностика</span>
+                    <span class="swiper-slide__legend swiper-slide__priceHint">Цена</span>
+                    <span class="swiper-slide__text swiper-slide__price">Бесплатно</span>
+                    <span class="swiper-slide__legend swiper-slide__termHint">Срок</span>
+                    <span class="swiper-slide__text swiper-slide__term">30 мин</span> 
+                    <button class="swiper-slide__go-order long-button">
+                        <span class="long-button__text">заказать</span>
+                        <div class="long-button__arrow"></div>
+                    </button>
+                                                        
                 </div>
                 <div class="swiper-slide">
-                    <span class="swiper-slide__hint swiper-slide__servicesHint">Ремонтные услуги</span>
-                    <span class="swiper-slide__services">Замена дисплея</span>
-                    <span class="swiper-slide__hint swiper-slide__priceHint">Цена</span>
-                    <span class="swiper-slide__price">1000 	
+                    <span class="swiper-slide__legend swiper-slide__servicesHint">Ремонтные услуги</span>
+                    <span class="swiper-slide__text swiper-slide__services">Замена дисплея</span>
+                    <span class="swiper-slide__legend swiper-slide__priceHint">Цена</span>
+                    <span class="swiper-slide__text swiper-slide__price">1000 	
                         &#8381;</span>
-                    <span class="swiper-slide__hint swiper-slide__termHint">Срок</span>
-                    <span class="swiper-slide__term">30-120 мин</span>                                      
-                    <div class="swiper-slide__goOrder"><button>заказать<div></div></button></div>
+                    <span class="swiper-slide__legend swiper-slide__termHint">Срок</span>
+                    <span class="swiper-slide__text swiper-slide__term">30-120 мин</span>                                                        
+                    <button class="swiper-slide__go-order long-button">
+                        <span class="long-button__text">заказать</span>
+                        <div class="long-button__arrow"></div>
+                    </button>
+                     
                 </div>
                 <div class="swiper-slide">
-                    <span class="swiper-slide__hint swiper-slide__servicesHint">Ремонтные услуги</span>
-                    <span class="swiper-slide__services">Замена полифонического динамика</span>
-                    <span class="swiper-slide__hint swiper-slide__priceHint">Цена</span>
-                    <span class="swiper-slide__price">1000 &#8381;</span>
-                    <span class="swiper-slide__hint swiper-slide__termHint">Срок</span>
-                    <span class="swiper-slide__term">30-120 мин</span>                                      
-                    <div class="swiper-slide__goOrder"><button>заказать<div></div></button></div>
+                    <span class="swiper-slide__legend swiper-slide__servicesHint">Ремонтные услуги</span>
+                    <span class="swiper-slide__text swiper-slide__services">Замена полифонического динамика</span>
+                    <span class="swiper-slide__legend swiper-slide__priceHint">Цена</span>
+                    <span class="swiper-slide__text swiper-slide__price">1000 &#8381;</span>
+                    <span class="swiper-slide__legend swiper-slide__termHint">Срок</span>
+                    <span class="swiper-slide__text swiper-slide__term">30-120 мин</span>                                      
+                    <button class="swiper-slide__go-order long-button">
+                        <span class="long-button__text">заказать</span>
+                        <div class="long-button__arrow"></div>
+                    </button>
+                    
                 </div>
                 <div class="swiper-slide">
-                    <span class="swiper-slide__hint swiper-slide__servicesHint">Ремонтные услуги</span>
-                    <span class="swiper-slide__services">Тестирование с выдачей технического заключения</span>
-                    <span class="swiper-slide__hint swiper-slide__priceHint">Цена</span>
-                    <span class="swiper-slide__price">1000 &#8381;</span>
-                    <span class="swiper-slide__hint swiper-slide__termHint">Срок</span>
-                    <span class="swiper-slide__term">30-120 мин</span>                                      
-                    <div class="swiper-slide__goOrder"><button><span>заказать</span><div></div></button></div>
+                    <span class="swiper-slide__legend swiper-slide__servicesHint">Ремонтные услуги</span>
+                    <span class="swiper-slide__text swiper-slide__services">Тестирование с выдачей технического заключения</span>
+                    <span class="swiper-slide__legend swiper-slide__priceHint">Цена</span>
+                    <span class="swiper-slide__text swiper-slide__price">1000 &#8381;</span>
+                    <span class="swiper-slide__legend swiper-slide__termHint">Срок</span>
+                    <span class="swiper-slide__text swiper-slide__term">30-120 мин</span>                                                       
+                    <button class="swiper-slide__go-order long-button">
+                        <span class="long-button__text">заказать</span>
+                        <div class="long-button__arrow"></div>
+                    </button>
+                    
                 </div>
                 <div class="swiper-slide">
-                    <span class="swiper-slide__hint swiper-slide__servicesHint">Ремонтные услуги</span>
-                    <span class="swiper-slide__services">Замена программного обеспечения</span>
-                    <span class="swiper-slide__hint swiper-slide__priceHint">Цена</span>
-                    <span class="swiper-slide__price">1000 &#8381;</span>
-                    <span class="swiper-slide__hint swiper-slide__termHint">Срок</span>
-                    <span class="swiper-slide__term">30-120 мин</span>                                      
-                    <div class="swiper-slide__goOrder"><button>заказать<div></div></button></div>
+                    <span class="swiper-slide__legend swiper-slide__servicesHint">Ремонтные услуги</span>
+                    <span class="swiper-slide__text swiper-slide__services">Замена программного обеспечения</span>
+                    <span class="swiper-slide__legend swiper-slide__priceHint">Цена</span>
+                    <span class="swiper-slide__text swiper-slide__price">1000 &#8381;</span>
+                    <span class="swiper-slide__legend swiper-slide__termHint">Срок</span>
+                    <span class="swiper-slide__text swiper-slide__term">30-120 мин</span>                                      
+                    <button class="swiper-slide__go-order long-button">
+                        <span class="long-button__text">заказать</span>
+                        <div class="long-button__arrow"></div>
+                    </button>
                 </div>            
             </div>
             <div class="swiper-pagination"></div>

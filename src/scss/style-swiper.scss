@@ -7,6 +7,11 @@
         @media (min-width: 768px) {            
                 height: auto;       
             }
+    .swiper-slide {
+        background-color: $bgColor-white;
+        background-repeat: no-repeat;
+        background-position: 16px 50%;
+    }
 }
 .swiper-title {
     background:linear-gradient(90deg, $bgColor-smoke 1.39%, $bgColor-white 100%);  
@@ -51,44 +56,30 @@
             margin-right: 32px;        
         }
 }
-.swiper-slide__button {
-    width: 40px;
-    height: 40px;      
-    border-radius: 20px;
-    border: 0px;      
-    display: flex;
-    position: relative;
-    left: 148px; 
-    background-image: url('../img/go.svg');   
-    outline: none;
-    &:hover {
-        cursor: pointer;        
-        background-image: url('../img/go__hover.svg');        
-    }    
-}
+
 .lenovo {
-    background: $bgColor-white url("../img/logo-lenovo.svg") no-repeat 16px 50%;
+    background: url("../img/logo-lenovo.svg");
 }
 .samsung {
-    background: $bgColor-white url("../img/logo-samsung.svg") no-repeat 16px 50%;
+    background: url("../img/logo-samsung.svg");
 } 
 .apple {
-    background: $bgColor-white url("../img/logo-apple.svg") no-repeat 16px 50%;
+    background: url("../img/logo-apple.svg");
 } 
 .viewsonic {
-    background: $bgColor-white url("../img/logo-viewsonic.svg") no-repeat 16px 50%;
+    background: url("../img/logo-viewsonic.svg");
 } 
 .bosch {
-    background: $bgColor-white url("../img/logo-bosch.svg") no-repeat 16px 50%;
+    background: url("../img/logo-bosch.svg");
 } 
 .hp {
-    background: $bgColor-white url("../img/logo-hp.svg") no-repeat 16px 50%;
+    background: url("../img/logo-hp.svg");
 } 
 .acer {
-    background: $bgColor-white url("../img/logo-acer.svg") no-repeat 16px 50%;
+    background: url("../img/logo-acer.svg");
 } 
 .sony {
-    background: $bgColor-white url("../img/logo-sony.svg") no-repeat 16px 50%;
+    background: url("../img/logo-sony.svg");
 }  
 .swiper-pagination {  
     position: relative;

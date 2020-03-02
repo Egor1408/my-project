@@ -28,8 +28,15 @@ $borderGray: #eaeaea;
   src: url("../fonts/TTLakes-Bold.ttf") format("truetype"); 
   font-style: normal; 
   font-weight: 700; 
-}  
+} 
+
+
+
+
+
+
 @import 'mainPage';
+@import 'buttons';
 @import 'mainMenu';
 @import 'modalWindows';
 @import 'swiper.min';

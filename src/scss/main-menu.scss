@@ -39,6 +39,9 @@
                 z-index: 100; 
                 width: 320px;     
             }  
+            @media (max-height: 676px) {    
+                overflow-y: scroll;    
+            }
     }
 
     &__wrapper {
@@ -65,6 +68,10 @@
                 transform: translateX(0);
                 box-shadow: none;       
             }  
+            @media (max-height: 676px) {
+                position: relative;
+                overflow-y: scroll;
+            }
     }
 
     &__header {

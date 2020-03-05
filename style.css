@@ -718,6 +718,9 @@ html {
       opacity: 1;
       z-index: 100;
       width: 320px; } }
+  @media (max-height: 676px) {
+    .main-menu__overlay {
+      overflow-y: scroll; } }
 
 .main-menu__wrapper {
   width: 100%;
@@ -743,6 +746,10 @@ html {
       position: fixed;
       transform: translateX(0);
       box-shadow: none; } }
+  @media (max-height: 676px) {
+    .main-menu__wrapper {
+      position: relative;
+      overflow-y: scroll; } }
 
 .main-menu__header {
   height: 110px;
@@ -878,6 +885,9 @@ html {
   bottom: 0;
   background-color: rgba(255, 255, 255, 0);
   transition: background 0.5s ease-in; }
+  @media (max-height: 676px) {
+    .modal-window__overlay {
+      overflow-y: scroll; } }
 
 .modal-window__wrapper {
   width: 100%;
@@ -893,6 +903,10 @@ html {
     .modal-window__wrapper {
       width: 440px;
       padding: 0 32px 0 32px; } }
+  @media (max-height: 676px) {
+    .modal-window__wrapper {
+      position: relative;
+      overflow-y: scroll; } }
 
 .modal-window__close-feedback, .modal-window__close-orderCall {
   background-image: url(./static/button-closed.svg);
